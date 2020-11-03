@@ -3,3 +3,8 @@ coba pull resquest
 
 Farell Ambiar
 Muhammad Afif Raihan
+<<<<<<< Updated upstream
+=======
+Muhammad Afif Raihan 2222
+Muhammad Afif Raihan 3333
+>>>>>>> Stashed changes

@@ -19,6 +19,11 @@ class Kukerhut extends CI_Controller
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+    public function __construct()
+    {
+        parent::__construct();
+        $this->load->model('Products_model');
+    }
     public function index()
     {
         $this->load->view('templates/header');
@@ -27,8 +32,9 @@ class Kukerhut extends CI_Controller
     }
     public function products()
     {
+        $data['produk'] = $this->Products_model->getAllProducts();
         $this->load->view('templates/header');
-        $this->load->view('contents/products');
+        $this->load->view('contents/products', $data);
         $this->load->view('templates/footer');
     }
 }

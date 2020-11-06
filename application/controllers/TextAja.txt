@@ -14,3 +14,5 @@ mau nyoba merge dari repo contributor ale ke dan tak ambil dari repo ku
 
 test fetch
 
+dari lokal
+

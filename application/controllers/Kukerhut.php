@@ -33,7 +33,6 @@ class Kukerhut extends CI_Controller
     }
     public function products()
     {
-        //$data['produk'] = $this->Products_model->getAllProducts();
         //konfigurasi pagination
         $config['base_url'] = site_url('Kukerhut/products'); //site url
         $config['total_rows'] = $this->db->count_all('produk'); //total row
@@ -66,7 +65,9 @@ class Kukerhut extends CI_Controller
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  
         //panggil function getAllProducts yang ada pada model Products_model. 
-        $data['data'] = $this->Products_model->getAllProducts($config["per_page"], $data['page']);           
+        $data['data'] = $this->Products_model->getAllProducts($config["per_page"], $data['page']);
+        //$data['data'] = $this->Products_model->getProductsByCategory($kategori);
+        $data['category'] = $this->Products_model->getAllCategories();           
         $data['pagination'] = $this->pagination->create_links();
  
         //load view

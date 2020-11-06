@@ -11,10 +11,9 @@ class Products_model extends CI_model
         return $this->db->get('kategori')->result();
     }
 
-    public function getProductsByCategory($kategori)
+    public function getProductsByCategory($id_kategori)
     {
-        $id_kategori = $this->db->get_where('kategori', array('Kategori'->$kategori))->row('id_kategori');
-        return $this->db->order_by('id_kategori','desc')->get_where('produk', array('id_kategori'->$id_kategori))->result();
+        return $this->db->get_where('produk', ['id_kategori' => $id_kategori])->result_array();
     }
 }
 ?>

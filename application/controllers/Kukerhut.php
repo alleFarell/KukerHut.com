@@ -64,10 +64,10 @@ class Kukerhut extends CI_Controller
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
  
-        //panggil function getAllProducts yang ada pada model Products_model. 
+        //panggil function getAllProducts yang ada pada model Products_model.
         $data['data'] = $this->Products_model->getAllProducts($config["per_page"], $data['page']);
         //$data['data'] = $this->Products_model->getProductsByCategory($kategori);
-        $data['category'] = $this->Products_model->getAllCategories();           
+        $data['category'] = $this->Products_model->getAllCategories(); 
         $data['pagination'] = $this->pagination->create_links();
  
         //load view

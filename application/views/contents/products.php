@@ -15,16 +15,16 @@
     			<ul class="product-category">
 					<li><a href="#" class="active">All</a></li>
 					<?php foreach ($category as $ct) { ?>
-    				<li><a href="<?= site_url('products/category/'), $ct->nama_kategori ?>"><?= $ct->nama_kategori ?></a></li>
+    					<li><a href="<?= site_url('products/category/'), $ct->nama_kategori ?>"><?= $ct->nama_kategori ?></a></li>
 					<?php } ?>
     			</ul>
     		</div>
     	</div>
     	<div class="row">
-			<?php foreach ($data as $p) : ?>
+		<?php foreach ($product as $p) : ?>
     		<div class="col-md-6 col-lg-3 ftco-animate">
     			<div class="product">
-    				<a class="img-prod"><img class="img-fluid" src="<?= base_url('assets/images/product-1.jpg') ?>" alt="Colorlib Template">
+    				<a class="img-prod"><img class="img-fluid" src="<?= base_url('assets/images/').$p['foto_produk'] ?>" alt="Colorlib Template">
     					<span class="status">Serba 25rb</span>
     					<div class="overlay"></div>
     				</a>
@@ -37,21 +37,18 @@
 	    				</div>
 	    				<div class="bottom-area d-flex px-3">
 	    					<div class="m-auto d-flex">
-	    						<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-	    							<span><i class="ion-ios-menu"></i></span>
+	    						<a class="info d-flex justify-content-center align-items-center text-center">
+	    							<span><i class="ion-ios-alert"></i></span>
 	    						</a>
 	    						<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
 	    							<span><i class="ion-ios-cart"></i></span>
-	    						</a>
-	    						<a href="#" class="heart d-flex justify-content-center align-items-center ">
-	    							<span><i class="ion-ios-heart"></i></span>
 	    						</a>
     						</div>
     					</div>
     				</div>
     			</div>
     		</div>
-			<?php endforeach; ?>
+		<?php endforeach; ?>
     	</div>
     	<div class="row mt-5">
             <div class="col text-center">

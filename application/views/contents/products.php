@@ -15,7 +15,6 @@
 				<ul class="product-category">
 					<li><a href="#" class="active">All</a></li>
 					<?php foreach ($category as $ct) { ?>
-<<<<<<< HEAD
 
 						<li><a href="<?= site_url('products/category/'), $ct->nama_kategori ?>"><?= $ct->nama_kategori ?></a></li>
 					<?php } ?>
@@ -67,53 +66,6 @@
 		</div>
 	</div>
 
-=======
-    				<li><a href="<?= site_url('products/category/'), $ct->nama_kategori ?>"><?= $ct->nama_kategori ?></a></li>
-					<?php } ?>
-    			</ul>
-    		</div>
-    	</div>
-    	<div class="row">
-			<?php foreach ($data as $p) : ?>
-    		<div class="col-md-6 col-lg-3 ftco-animate">
-    			<div class="product">
-    				<a class="img-prod"><img class="img-fluid" src="<?= base_url('assets/images/product-1.jpg') ?>" alt="Colorlib Template">
-    					<span class="status">Serba 25rb</span>
-    					<div class="overlay"></div>
-    				</a>
-    				<div class="text py-3 pb-4 px-3 text-center">
-    					<h3><a href="#"><?= $p['nama_produk']; ?></a></h3>
-    					<div class="d-flex">
-    						<div class="pricing">
-		    					<p class="price"><span class="mr-2 price-dc"><?= $p['harga_produk']; ?></span><span class="price-sale">Rp25.000</span></p>
-		    				</div>
-	    				</div>
-	    				<div class="bottom-area d-flex px-3">
-	    					<div class="m-auto d-flex">
-	    						<a href="#" class="add-to-cart d-flex justify-content-center align-items-center text-center">
-	    							<span><i class="ion-ios-menu"></i></span>
-	    						</a>
-	    						<a href="#" class="buy-now d-flex justify-content-center align-items-center mx-1">
-	    							<span><i class="ion-ios-cart"></i></span>
-	    						</a>
-	    						<a href="#" class="heart d-flex justify-content-center align-items-center ">
-	    							<span><i class="ion-ios-heart"></i></span>
-	    						</a>
-    						</div>
-    					</div>
-    				</div>
-    			</div>
-    		</div>
-			<?php endforeach; ?>
-    	</div>
-    	<div class="row mt-5">
-            <div class="col text-center">
-                <!--Tampilkan pagination-->
-            	<?php echo $pagination; ?>
-            </div>
-        </div>
-    </div>
->>>>>>> parent of 25126a6... Merge pull request #27 from alleFarell/Ray-Work
 </section>
 
 <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">

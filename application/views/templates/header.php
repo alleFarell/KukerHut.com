@@ -45,9 +45,9 @@
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="<?= base_url() ?>" class="nav-link">Home</a></li>
-                    <li class="nav-item active"><a href="<?= base_url('KukerHut/products') ?>" class="nav-link">Product</a></li>
-                    <li class="nav-item"><a href="about.html" class="nav-link">About Us</a></li>
-                    <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                    <li class="nav-item active"><a href="<?= base_url('kukerhut/products') ?>" class="nav-link">Product</a></li>
+                    <li class="nav-item"><a href="<?= base_url('kukerhut/aboutUs') ?>" class="nav-link">About Us</a></li>
+                    <li class="nav-item"><a href="<?= base_url('kukerhut/contact') ?>" class="nav-link">Contact</a></li>
 
                 </ul>
             </div>

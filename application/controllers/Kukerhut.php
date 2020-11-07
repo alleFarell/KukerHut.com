@@ -40,7 +40,7 @@ class Kukerhut extends CI_Controller
         $config["uri_segment"] = 3;  // uri parameter
         $choice = $config["total_rows"] / $config["per_page"];
         $config["num_links"] = floor($choice);
- 
+
         // Membuat Style pagination
         $config['first_link']       = 'First';
         $config['last_link']        = 'Last';
@@ -60,20 +60,20 @@ class Kukerhut extends CI_Controller
         $config['first_tagl_close'] = '</span></li>';
         $config['last_tag_open']    = '<li class="page-item"><span class="page-link">';
         $config['last_tagl_close']  = '</span></li>';
- 
+
         $this->pagination->initialize($config);
         $data['page'] = ($this->uri->segment(3)) ? $this->uri->segment(3) : 0;
- 
+
         //panggil function getAllProducts yang ada pada model Products_model.
         $data['product'] = $this->Products_model->getAllProducts($config["per_page"], $data['page']);
         //$data['data'] = $this->Products_model->getProductsByCategory($kategori);
-        $data['category'] = $this->Products_model->getAllCategories(); 
+        $data['category'] = $this->Products_model->getAllCategories();
         $data['pagination'] = $this->pagination->create_links();
- 
+
         //load view
         $this->load->view('templates/header');
         $this->load->view('contents/products', $data);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footer', $data);
     }
     public function contact()
     {

@@ -1,9 +1,9 @@
-<?php 
+<?php
 class Products_model extends CI_model
 {
-    public function getAllProducts($limit,$start)
+    public function getAllProducts($limit, $start)
     {
-        return $this->db->get('produk',$limit,$start)->result_array();
+        return $this->db->get('produk', $limit, $start)->result_array();
     }
 
     public function getAllCategories()
@@ -16,4 +16,3 @@ class Products_model extends CI_model
         return $this->db->get_where('produk', ['id_kategori' => $id_kategori])->result_array();
     }
 }
-?>

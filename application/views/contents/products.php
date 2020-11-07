@@ -15,6 +15,7 @@
 				<ul class="product-category">
 					<li><a href="#" class="active">All</a></li>
 					<?php foreach ($category as $ct) { ?>
+
 						<li><a href="<?= site_url('products/category/'), $ct->nama_kategori ?>"><?= $ct->nama_kategori ?></a></li>
 					<?php } ?>
 				</ul>
@@ -26,7 +27,7 @@
 				<div class="col-md-6 col-lg-3 ftco-animate">
 					<button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" style="background: none;border: none;float: left;">
 						<div class="product">
-							<a class="img-prod"><img class="img-fluid" src="<?= base_url('assets/images/product-1.jpg') ?>" alt="Colorlib Template">
+							<a class="img-prod"><img class="img-fluid" src="<?= base_url('assets/images/').$p['foto_produk'] ?>" alt="Colorlib Template">
 								<span class="status">Serba 25rb</span>
 								<div class="overlay"></div>
 							</a>

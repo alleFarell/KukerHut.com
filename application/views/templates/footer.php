@@ -105,9 +105,9 @@
 <script src="<?= base_url('assets/js/main.js') ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
-	  var popup = document.querySelectorAll(".img-prod");
-	  var i;
-	  for (i = 0; i < popup.length; i++) {
+	var popup = document.querySelectorAll(".img-prod");
+	var i;
+	for (i = 0; i < popup.length; i++) {
 		popup[i].addEventListener('click', function(){
 		  Swal.fire({
 			title: 'Sweet!',
@@ -117,10 +117,9 @@
 			imageHeight: 200,
 			imageAlt: 'Custom image',
 		  });
-	  }); 
-	  }
-  </script>
-
+	    }); 
+	}
+</script>
 </body>
 
 </html>

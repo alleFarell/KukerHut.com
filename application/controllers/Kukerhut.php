@@ -75,10 +75,18 @@ class Kukerhut extends CI_Controller
         $this->load->view('contents/products', $data);
         $this->load->view('templates/footer');
     }
+
     public function contact()
     {
         $this->load->view('templates/header');
         $this->load->view('contents/contact');
+        $this->load->view('templates/footer');
+    }
+
+    public function aboutUs()
+    {
+        $this->load->view('templates/header');
+        $this->load->view('contents/aboutUs');
         $this->load->view('templates/footer');
     }
 }

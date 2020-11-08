@@ -55,7 +55,11 @@
 		<div class="row mt-5">
 			<div class="col text-center">
 				<!--Tampilkan pagination-->
-				<!-- <?php echo $pagination; ?> -->
+				<?php if ($this->uri->segment('3') == '') {
+					echo $pagination;
+				} else {
+					echo $this->pagination->create_links();
+				} ?>
 			</div>
 		</div>
 	</div>

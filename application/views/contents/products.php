@@ -13,10 +13,10 @@
 		<div class="row justify-content-center">
 			<div class="col-md-10 mb-5 text-center">
 				<ul class="product-category">
-					<li><a href="<?= base_url();?>Kukerhut/products/" class="active">All</a></li>
+					<li><a href="<?= base_url(); ?>Kukerhut/products/" class="active">All</a></li>
 					<?php foreach ($category as $ct) { ?>
 						<!-- <li><a href="<?= site_url('products/category/'), $ct->id_kategori ?>"><?= $ct->nama_kategori ?></a></li> -->
-						<li><a href="<?= base_url();?>Kukerhut/category/<?= $ct->id_kategori; ?>"><?= $ct->nama_kategori ?></a></li>
+						<li><a href="<?= base_url(); ?>Kukerhut/category/<?= $ct->id_kategori; ?>"><?= $ct->nama_kategori ?></a></li>
 					<?php } ?>
 				</ul>
 			</div>
@@ -98,8 +98,8 @@
 					<hr style="width: 50%;background-color:#82ae46;">
 					<div class="card-body">
 						<h5 class="modal-title float-left" id="exampleModalLabel" style="color: #82ae46;font-weight: 500;font-size: 25px;"><?= $d['nama_produk'] ?></h5>
-						<h5 class="text-right mb-0 p-0" style="font-weight: bold;color: #82ae46;font-size: 25px;">Rp. 25.000 <br><a href="https://api.whatsapp.com/send?phone=628111512711&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>%20ini	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a></h5>
-						<p class="badge badge-success pt-0"><?= $this->Products_model->getCategoryByProduct($d['id_kategori'])?></p>
+						<h5 class="text-right mb-0 p-0" style="font-weight: bold;color: #82ae46;font-size: 25px;">Rp. 25.000 <br><a target="_blank" href="https://api.whatsapp.com/send?phone=628111512711&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>%20ini	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a></h5>
+						<p class="badge badge-success pt-0"><?= $d['nama_kategori'] ?></p>
 						<div class="desc" style="width: 50%;">
 							<p><?= $d['deskripsi_produk'] ?></p>
 						</div>

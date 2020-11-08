@@ -104,41 +104,6 @@
 <script src="<?= base_url('assets/js/google-map.js') ?>"></script>
 <script src="<?= base_url('assets/js/main.js') ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
-<script>
-<<<<<<< HEAD
-    // var popup = document.querySelectorAll(".img-prod");
-    // var i;
-    // for (i = 0; i < popup.length; i++) {
-    //     popup[i].addEventListener('click', function() {
-    //         Swal.fire({
-    //             title: 'Sweet!',
-    //             text: 'Modal with a custom image.',
-    //             imageUrl: ,
-    //             imageWidth: 400,
-    //             imageHeight: 200,
-    //             imageAlt: 'Custom image',
-    //         });
-    //     });
-    // }
-</script>
-=======
-	  var popup = document.querySelectorAll(".img-prod");
-	  var i;
-	  for (i = 0; i < popup.length; i++) {
-		popup[i].addEventListener('click', function(){
-		  Swal.fire({
-			title: 'Sweet!',
-			text: 'Modal with a custom image.',
-			imageUrl: 'https://unsplash.it/400/200',
-			imageWidth: 400,
-			imageHeight: 200,
-			imageAlt: 'Custom image',
-		  });
-	  }); 
-	  }
-  </script>
-
->>>>>>> parent of 25126a6... Merge pull request #27 from alleFarell/Ray-Work
 </body>
 
 </html>

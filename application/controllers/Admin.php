@@ -7,12 +7,12 @@ class Admin extends CI_Controller
     {
         parent::__construct();
         $this->load->model('Admin_model');
-        $this->load->model('Product_model');
-        $this->load->model('ModelAuth');
+        $this->load->model('Products_model');
+        // $this->load->model('ModelAuth');
     }
 
     // BAGIAN PRODUK
-    public function view_all_product()
+    public function index()
     {
         $content['title'] = 'Data Produk';
         $content['page'] = 'dataproduk';
@@ -24,37 +24,24 @@ class Admin extends CI_Controller
 
     public function tambah_produk()
     {
-        $content['title'] = 'Tambah akun';
-        $this->form_validation->set_rules('fullname', 'Fullname', 'required|trim');
-        $this->form_validation->set_rules('username', 'Nama', 'required|trim|is_unique[akun.username]', [
-            'is_unique' => 'Username Sudah Terpakai'
+        $content['title'] = 'Tambah produk';
+        $content['kategori'] = $this->Products_model->getAllCategories();
+        $this->form_validation->set_rules('nama_produk', 'Nama Produk', 'required|trim|is_unique[produk.nama_produk]', [
+            'is_unique' => 'Produk Sudah Tersedia'
         ]);
-        $this->form_validation->set_rules('email', 'Email', 'required|trim|valid_email|is_unique[akun.email]', [
-            'is_unique' => 'Email Sudah Pernah Didaftarkan'
-        ]);
-
-        $role_id = $content['user']['role_id'];
-        if ($content['user']) {
-            if ($role_id == 1) {
-                $last_id = $this->ModelAuth->getLastData();
-                $content['last_id'] = $last_id['id'] + 1;
-                if ($this->form_validation->run() == false) {
-                    $this->load->view('templates/headerAdmin', $content);
-                    $this->load->view('admin/tambahAkun', $content);
-                    $this->load->view('templates/footer');
-                } else {
-                    $this->ModelAuth->tambahMemberBaru();
-                    $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Akun Berhasil Didaftarkan <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/headerAdmin', $content);
+            $this->load->view('admin/tambahProduk', $content);
+            $this->load->view('templates/footer');
+        } else {
+            $this->Admin_model->tambahProdukBaru();
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Akun Berhasil Didaftarkan <button type="button" class="close" data-dismiss="alert" aria-label="Close">
                     <span aria-hidden="true">&times;</span>
                     </button></div>');
-                    redirect('admin/view_all_akun');
-                }
-            } else {
-                redirect('auth/blocked');
-            }
-        } else {
-            redirect('auth');
+            redirect('admin/index');
         }
+            
     }
 
     public function form_ubah_akun($id)

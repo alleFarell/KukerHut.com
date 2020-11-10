@@ -13,7 +13,7 @@
 				<form class="col-md-12" action="<?= base_url('admin/tambah_produk') ?>" method="post">
 					<div class="d-flex justify-content-center">
 						<div class="col-md-10">
-							<input type="hidden" name="id_produk" id="id_produk" class="form-control" value="<?= $last_id;  ?>">
+							
 							<div class="form-group">
 								<label for="namaproduk" class="mt-0">Nama Produk</label>
 								<div class="input-group">
@@ -38,9 +38,10 @@
                                 <label for="kategoriproduk" class="col-sm-2 col-form-label">Kategori</label>
                                 <div class="col-sm-10">
                                     <select class="form-control form-control-md" id="kategoriproduk" name="kategoriproduk">
-                                        <?php foreach ($kategori as $k) : ?>
-                                            <option value="<?= $p['id_kategori'] ?>"><?= $k['nama_kategori'] ?></option>
-                                        <?php endforeach; ?>
+                                        <?php foreach ($c as $k) { ?>
+												<option><a value="<?= $k['id_kategori']?>"><?= $k['nama_kategori'] ?></a></option>
+										<?php } ?>
+										<!-- masih error -->
                                     </select>
                                 </div>
                             </div>
@@ -50,7 +51,7 @@
 									<div class="input-group-prepend">
 										<div class="input-group-text"><i class="fas fa-briefcase"></i></div>
 									</div>
-									<input type="text" name="deskripsiproduk" id="deskripsiproduk" class="form-control" placeholder="Masukkan Deskripsi Produk" value="<?= set_value('deskripsiproduk') ?>">
+									<input type="text-box" name="deskripsiproduk" id="deskripsiproduk" class="form-control" placeholder="Masukkan Deskripsi Produk" value="<?= set_value('deskripsiproduk') ?>">
 								</div>
 								<small class="text-danger"><?= form_error('deskripsiproduk') ?></small>
 							</div>

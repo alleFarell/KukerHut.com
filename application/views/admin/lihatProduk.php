@@ -18,7 +18,7 @@
 					$this->table->set_template($template);
 					$this->table->set_heading('ID', 'Foto Produk', 'Nama Produk', 'Harga', 'Kategori', 'Deskripsi');
 
-					foreach ($dpta_produk as $dp) {
+					foreach ($data_produk as $dp) {
 						$url = 'KukerHut/Kukerhut/admin/hapus_produk/' . $dp['id_produk'];
 						$this->table->add_row(
 							$dp['id_produk'],

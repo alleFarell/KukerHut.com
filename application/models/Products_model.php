@@ -11,6 +11,11 @@ class Products_model extends CI_model
         return $this->db->get('kategori')->result();
     }
 
+    public function get_all()
+	{
+		return $this->db->get('produk')->result_array();
+	}
+
     public function getProductsByCategory($table, $id_kategori, $limit, $start)
     {
         return $this->db->get_where($table, array('id_kategori'=>$id_kategori), $limit, $start)->result_array();

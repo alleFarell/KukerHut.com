@@ -15,7 +15,6 @@
 				<ul class="product-category">
 					<li><a href="<?= base_url(); ?>Kukerhut/products/" class="active">All</a></li>
 					<?php foreach ($category as $ct) { ?>
-						<!-- <li><a href="<?= site_url('products/category/'), $ct->id_kategori ?>"><?= $ct->nama_kategori ?></a></li> -->
 						<li><a href="<?= base_url(); ?>Kukerhut/category/<?= $ct->id_kategori; ?>"><?= $ct->nama_kategori ?></a></li>
 					<?php } ?>
 				</ul>

@@ -8,17 +8,22 @@ class Products_model extends CI_model
 
     public function getAllCategories()
     {
+        return $this->db->get('kategori')->result_array();
+    }
+
+    public function getCategory()
+    {
         return $this->db->get('kategori')->result();
     }
 
     public function get_all()
-	{
-		return $this->db->get('produk')->result_array();
-	}
+    {
+        return $this->db->get('produk')->result_array();
+    }
 
     public function getProductsByCategory($table, $id_kategori, $limit, $start)
     {
-        return $this->db->get_where($table, array('id_kategori'=>$id_kategori), $limit, $start)->result_array();
+        return $this->db->get_where($table, array('id_kategori' => $id_kategori), $limit, $start)->result_array();
     }
 
     public function getProductsByCat($id_kategori)
@@ -30,6 +35,4 @@ class Products_model extends CI_model
     {
         return $this->db->get_where('kategori', ['id_kategori' => $id_kategori])->row('nama_kategori');
     }
-
-
 }

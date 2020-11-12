@@ -8,6 +8,7 @@ class Admin extends CI_Controller
         parent::__construct();
         $this->load->model('Admin_model');
         $this->load->model('Products_model');
+        $this->load->helper(array('form', 'url'));
         // $this->load->model('ModelAuth');
     }
 
@@ -19,7 +20,7 @@ class Admin extends CI_Controller
         $content['data_produk'] = $this->Products_model->get_all();
         $this->load->view('templates/headerAdmin', $content);
         $this->load->view('admin/lihatProduk', $content);
-        $this->load->view('templates/footer');
+        $this->load->view('templates/footerAdmin');
     }
 
     public function tambah_produk()
@@ -29,11 +30,13 @@ class Admin extends CI_Controller
         $this->form_validation->set_rules('nama_produk', 'Nama Produk', 'required|trim|is_unique[produk.nama_produk]', [
             'is_unique' => 'Produk Sudah Tersedia'
         ]);
-                
+
+
+
         if ($this->form_validation->run() == false) {
             $this->load->view('templates/headerAdmin', $content);
             $this->load->view('admin/tambahProduk', $content);
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footerAdmin');
         } else {
             $this->Admin_model->tambahProdukBaru();
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Akun Berhasil Didaftarkan <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -41,8 +44,28 @@ class Admin extends CI_Controller
                     </button></div>');
             redirect('admin/index');
         }
-            
     }
+
+    // public function addFotoProduk()
+    // {
+    //     $config['upload_path']          = './assets/images/fotoProduk/';
+    //     $config['allowed_types']        = 'gif|jpg|png|jpeg';
+    //     $config['max_size']             = 100;
+    //     $config['max_width']            = 1024;
+    //     $config['max_height']           = 768;
+
+    //     $this->load->library('upload', $config);
+
+    //     if (!$this->upload->do_upload('fotoproduk')) {
+    //         $error = array('error' => $this->upload->display_errors());
+    //         $this->load->view('templates/headerAdmin', $error);
+    //         $this->load->view('admin/tambahProduk', $error);
+    //         $this->load->view('templates/footerAdmin', $error);
+    //     } else {
+    //         $data = array('upload_data' => $this->upload->data());
+    //         $this->load->view('upload_success', $data);
+    //     }
+    // }
 
     public function form_ubah_akun($id)
     {

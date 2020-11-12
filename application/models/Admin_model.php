@@ -28,4 +28,47 @@ class Admin_model extends CI_Model
         // foto produk belum
         $this->db->insert('produk', $data);
     }
+
+    public function tambahKategoriBaru()
+    {
+        $data = [
+            'nama_kategori' => htmlspecialchars($this->input->post('nama_kategori', true))
+        ];
+        $this->db->insert('kategori', $data);
+    }
+
+    public function editProduk($id)
+    {
+        $data = array(
+            'nama_kategori' => htmlspecialchars($this->input->post('nama_kategori', true)),
+            'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
+            'harga_produk' => htmlspecialchars($this->input->post('harga_produk', true)),
+            'foto_produk' => 'default.png',
+            'deskripsi_produk' => htmlspecialchars($this->input->post('deskripsi_produk', true)),
+            'harga_produk' => htmlspecialchars($this->input->post('harga_produk', true))
+        );
+        $this->db->where('id_produk', $id);
+        return $this->db->update('produk', $data);
+    }
+
+    public function editKategori($id)
+    {
+        $data = array(
+            'nama_kategori' => htmlspecialchars($this->input->post('nama_kategori', true))
+        );
+        $this->db->where('id_kategori', $id);
+        return $this->db->update('kategori', $data);
+    }
+
+    public function delete_Produk($id)
+    {
+        $this->db->where('id_produk', $id);
+        return $this->db->delete('produk');
+    }
+
+    public function delete_Kategori($id)
+    {
+        $this->db->where('id_kategori', $id);
+        return $this->db->delete('kategori');
+    }
 }

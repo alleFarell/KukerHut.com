@@ -35,4 +35,16 @@ class Products_model extends CI_model
     {
         return $this->db->get_where('kategori', ['id_kategori' => $id_kategori])->row('nama_kategori');
     }
+
+    public function get_product($id)
+	{
+		$this->db->where('id_produk', $id);
+		return $this->db->get('produk')->row_array();
+    }
+
+    public function get_kategori($id)
+	{
+		$this->db->where('id_kategori', $id);
+		return $this->db->get('kategori')->row_array();
+    }
 }

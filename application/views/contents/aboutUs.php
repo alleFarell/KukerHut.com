@@ -20,13 +20,14 @@
             <div class="col-md-7 py-5 wrap-about pb-md-5 ftco-animate">
                 <div class="heading-section-bold mb-4 mt-md-5">
                     <div class="ml-md-0">
-                        <h2 class="mb-4">Welcome to Vegefoods an eCommerce website</h2>
+                        <h2 class="mb-4">Selamat Datang di website KukerHut!</h2>
                     </div>
                 </div>
                 <div class="pb-md-5">
-                    <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in Bookmarksgrove right at the coast of the Semantics, a large language ocean.</p>
-                    <p>But nothing the copy said could convince her and so it didn’t take long until a few insidious Copy Writers ambushed her, made her drunk with Longe and Parole and dragged her into their agency, where they abused her for their.</p>
-                    <p><a href="#" class="btn btn-primary">Shop now</a></p>
+                    <p>KukerHut adalah usaha rumahan khusus untuk kuliner. Produk khas kami adalah Kue Kering.</p>
+                    <p>Kami juga menyediakan Cake untuk Event (Wedding, Birthday, Anniversary, dll)</p>
+                    <p>Tak lupa juga Dessert untuk cemilan dan teman Anda dikala santai bersama keluarga atau berkumpul dengan teman dan sahabat saat arisan atau pengajian.</p>
+                    <p><a href="#" class="btn btn-primary">Belanja di KukerHut sekarang!</a></p>
                 </div>
             </div>
         </div>
@@ -38,7 +39,7 @@
         <div class="row d-flex justify-content-center py-5">
             <div class="col-md-6">
                 <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
-                <span>Get e-mail updates about our latest shops and special offers</span>
+                <span>Dapatkan pemberitahuan ter-update mengenai promo di KukerHut!</span>
             </div>
             <div class="col-md-6 d-flex align-items-center">
                 <form action="#" class="subscribe-form">
@@ -77,7 +78,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <strong class="number" data-number="1000">0</strong>
-                                <span>Partner</span>
+                                <span>Partner Kami</span>
                             </div>
                         </div>
                     </div>
@@ -85,7 +86,7 @@
                         <div class="block-18 text-center">
                             <div class="text">
                                 <strong class="number" data-number="100">0</strong>
-                                <span>Awards</span>
+                                <span>Penghargaan</span>
                             </div>
                         </div>
                     </div>
@@ -99,9 +100,9 @@
     <div class="container">
         <div class="row justify-content-center mb-5 pb-3">
             <div class="col-md-7 heading-section ftco-animate text-center">
-                <span class="subheading">Testimony</span>
+                <span class="subheading">Testimonial</span>
                 <h2 class="mb-4">Our satisfied customer says</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+                <p>Kue yang ditawarkan oleh KukerHut sangatlah beragam! Recommended lho untuk pesan ini. Selain harganya terjangkau, juga kualitas nya terjamin sampai di rumah Anda :)</p>
             </div>
         </div>
         <div class="row ftco-animate">
@@ -115,8 +116,8 @@
                                 </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
+                                <p class="mb-5 pl-4 line">Hi, aku Rachmat Dwi Putra, mengurus tentang marketing manager. Jadi,marketing management adalah serangkaian proses menganalisa, merencanakan, menjalankan, mengawasi dan mengevaluasi program pemasaran yang meliputi product, price, placement dan promotion.</p>
+                                <p class="name">Rachmat Dwi Putra</p>
                                 <span class="position">Marketing Manager</span>
                             </div>
                         </div>
@@ -129,8 +130,8 @@
                                 </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
+                                <p class="mb-5 pl-4 line">Nama saya Mohammad Daffa Haris, sebagai Desainer pada Interface web ini. Semoga kalian menikmati tampilan yang telah kami sediakan :)</p>
+                                <p class="name">Mohammad Daffa Haris</p>
                                 <span class="position">Interface Designer</span>
                             </div>
                         </div>
@@ -143,8 +144,8 @@
                                 </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
+                                <p class="mb-5 pl-4 line">Sebagai UI designer merupakan pengalaman terbaru bagi saya dalam mengembangkan website Kukerhut ini. Happy shopping!</p>
+                                <p class="name">Rayhan Rahmanda</p>
                                 <span class="position">UI Designer</span>
                             </div>
                         </div>
@@ -157,8 +158,8 @@
                                 </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
+                                <p class="mb-5 pl-4 line">Nama saya Afif, sebagai pengelola pada web ini. Have enjoy dan stay safe.</p>
+                                <p class="name">Muhammad Afif Raihan</p>
                                 <span class="position">Web Developer</span>
                             </div>
                         </div>
@@ -171,9 +172,9 @@
                                 </span>
                             </div>
                             <div class="text text-center">
-                                <p class="mb-5 pl-4 line">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
-                                <p class="name">Garreth Smith</p>
-                                <span class="position">System Analyst</span>
+                                <p class="mb-5 pl-4 line">Saya sebagai pimpinan pada project ini, sangat bersyukur karena telah terealisasi web ini. Selain itu, dengan menjadi Data Analyst, kami akan terus memberikan yang terbaik kepada pelanggan tercinta :)</p>
+                                <p class="name">Muhamad Farell Ambiar</p>
+                                <span class="position">Data Analyst</span>
                             </div>
                         </div>
                     </div>
@@ -193,7 +194,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Free Shipping</h3>
-                        <span>On order over $100</span>
+                        <span>On order over Rp100.000</span>
                     </div>
                 </div>
             </div>

@@ -66,7 +66,7 @@ class Kukerhut extends CI_Controller
 
         //panggil function getAllProducts yang ada pada model Products_model.
         $data['data'] = $this->Products_model->getAllProducts($config["per_page"], $data['page']);
-        $data['category'] = $this->Products_model->getAllCategories();
+        $data['category'] = $this->Products_model->getCategory();
         $data['pagination'] = $this->pagination->create_links();
 
         //load view
@@ -126,7 +126,7 @@ class Kukerhut extends CI_Controller
         //panggil function getAllProducts yang ada pada model Products_model.
         $data['data'] = $this->Products_model->getProductsByCat($id);
         //$data['data'] = $this->Products_model->getProductsByCategory('produk', $id, $config["per_page"], $data['page']);
-        $data['category'] = $this->Products_model->getAllCategories();
+        $data['category'] = $this->Products_model->getCategory();
         $data['pagination_c'] = $this->pagination->create_links();
 
         //load view

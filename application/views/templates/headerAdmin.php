@@ -38,14 +38,14 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url() ?>"><img src="assets\images\Logo n Text Horizontal.png" height="80px" width="300px"></a>
+            <a class="navbar-brand" href="<?= base_url() ?>"><img src="<?= base_url('assets\images\Logo n Text Horizontal.png') ?>" height="80px" width="300px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
-                    <li class="nav-item active"><a href="<?= base_url() ?>" class="nav-link">Data Produk</a></li>
+                    <li class="nav-item active"><a href="<?= base_url('admin') ?>" class="nav-link">Data Produk</a></li>
                     <li class="nav-item active"><a href="<?= base_url() ?>" class="nav-link">Data Kategori</a></li>
                 </ul>
             </div>
@@ -55,7 +55,7 @@
                     <li class="nav-item dropdown no-arrow">
                         <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             <span class="user-name mr-2 d-none d-lg-inline text-white small" style="text-transform: uppercase;font-weight: 500"></span>
-                            <img  src="assets\images\user.png" width="35">
+                            <img src="<?= base_url('assets\images\user.png') ?>" width="35">
                         </a>
                         <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in" aria-labelledby="userDropdown">
                             <a class="dropdown-item" href="<?= base_url() ?>">
@@ -65,7 +65,7 @@
                         </div>
                     </li>
                 </ul>
-        </form>
+            </form>
         </div>
     </nav>
     <!-- Navbar End -->

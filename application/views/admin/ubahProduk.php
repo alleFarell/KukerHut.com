@@ -15,7 +15,7 @@
 		<?= form_label('Kategori') ?>
 		<select class="custom-select" id="kategoriproduk" name="kategoriproduk">
             <?php foreach ($kategori as $k) : ?>
-                <option value="<?= $p['id_kategori'] ?>"><?= $k['nama_kategori'] ?></option>
+                <option value="<?= $k['id_kategori'] ?>"><?= $k['nama_kategori'] ?></option>
             <?php endforeach; ?>
         </select>
 	</div>
@@ -25,7 +25,7 @@
 	</div>
 	<!--  -->
 	<div class="form-group">
-		<a href="<?= base_url('admin/view_all_akun') ?>" class="btn btn-success">Back</a>
+		<a href="<?= base_url('admin') ?>" class="btn btn-success">Back</a>
 		<?= form_submit('submit', 'Update', ['class' => 'btn btn-warning', "onclick" => 'edit()']) ?>
 	</div>
 	<?= form_close() ?>

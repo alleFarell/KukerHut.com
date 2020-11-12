@@ -22,7 +22,7 @@
 					$this->table->set_heading('ID', 'Foto Produk', 'Nama Produk', 'Harga', 'Kategori', 'Deskripsi', 'action');
 
 					foreach ($data_produk as $dp) {
-						$url = 'KukerHut/Kukerhut/admin/hapus_produk/' . $dp['id_produk'];
+						$url = 'KukerHut/admin/hapus_produk/' . $dp['id_produk'];
 						if ($dp['foto_produk'] != 'default.png') {
 							$this->table->add_row(
 								$dp['id_produk'],

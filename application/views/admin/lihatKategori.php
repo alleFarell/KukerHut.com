@@ -16,10 +16,10 @@
 						'tbody_open' => '<tbody class ="text-center">',
 					);
 					$this->table->set_template($template);
-					$this->table->set_heading('ID', 'Nama Kategori');
+					$this->table->set_heading('ID', 'Nama Kategori', 'Action');
 
-					foreach ($dkta_kategori as $dk) {
-						$url = 'KukerHut/Kukerhut/admin/hapus_kategori/' . $dk['id_kategori'];
+					foreach ($data_kategori as $dk) {
+						$url = 'KukerHut/admin/hapus_kategori/' . $dk['id_kategori'];
 						$this->table->add_row(
 							$dk['id_kategori'],
 							$dk['nama_kategori'],

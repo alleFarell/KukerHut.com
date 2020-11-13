@@ -5,11 +5,11 @@
 	<?= form_open('admin/ubah_produk/' . $produk['id_produk']) ?>
 	<div class="form-group">
 		<?= form_label('Nama Produk') ?>
-		<?= form_input(['name' => 'namaproduk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['nama_produk']]) ?>
+		<?= form_input(['name' => 'nama_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['nama_produk']]) ?>
 	</div>
 	<div class="form-group">
 		<?= form_label('Harga Produk') ?>
-		<?= form_input(['name' => 'hargaproduk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['harga_produk']]) ?>
+		<?= form_input(['name' => 'harga_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['harga_produk']]) ?>
 	</div>
 	<div class="form-group">
 		<?= form_label('Kategori') ?>
@@ -21,7 +21,7 @@
 	</div>
 	<div class="form-group">
 		<?= form_label('Deskripsi Produk') ?>
-		<?= form_input(['name' => 'deskripsiproduk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['deskripsi_produk']]) ?>
+		<?= form_input(['name' => 'deskripsi_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['deskripsi_produk']]) ?>
 	</div>
 	<!--  -->
 	<div class="form-group">

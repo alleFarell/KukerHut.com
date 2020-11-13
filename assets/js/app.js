@@ -14,7 +14,10 @@ $(document).ready(function(){
                 className: 'mdl-data-table__cell--non-numeric'
             }
         ]
-    });
+	});
+	$(".submit").click(function () {
+		return false;
+	})
 });
 
 // Confirm sebelum hapus produk

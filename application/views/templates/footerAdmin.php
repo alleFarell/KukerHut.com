@@ -21,7 +21,12 @@
 </script>
 <script src="<?= base_url('assets/js/google-map.js') ?>"></script>
 <script src="<?= base_url('assets/js/main.js') ?>"></script>
-<script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
+<script src="<?= base_url('assets/js/app.js') ?>"></script>
+<!-- DataTables -->
+<script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js" charset="uts-8"></script>
+<script src="https://cdn.datatables.net/1.10.20/js/dataTables.bootstrap4.min.js" charset="uts-8"></script>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@7.26.10/dist/sweetalert2.all.min.js"></script>
+<script type="text/javascript" charset="utf8" src="https://cdn.datatables.net/1.10.19/js/jquery.dataTables.js"></script>
 <script src="https://kit.fontawesome.com/956e9a5b88.js" crossorigin="anonymous"></script>
 
 </body>

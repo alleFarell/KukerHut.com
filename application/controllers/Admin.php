@@ -104,7 +104,7 @@ class Admin extends CI_Controller
             $data['title'] = "Ubah Produk";
             $this->load->view('templates/headerAdmin', $content);
             $this->load->view('admin/ubahProduk', $content);
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footerAdmin');
         } else {
             $this->Admin_model->editProduk($id);
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Produk Berhasil Dirubah <button type="button" class="close" data-dismiss="alert" aria-label="Close">
@@ -128,7 +128,7 @@ class Admin extends CI_Controller
             $data['title'] = "Ubah Kategori";
             $this->load->view('templates/headerAdmin', $content);
             $this->load->view('admin/ubahKategori', $content);
-            $this->load->view('templates/footer');
+            $this->load->view('templates/footerAdmin');
         } else {
             $this->Admin_model->editKategori($id);
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Kategori Berhasil Dirubah <button type="button" class="close" data-dismiss="alert" aria-label="Close">

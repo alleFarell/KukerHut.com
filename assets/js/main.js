@@ -155,6 +155,9 @@ function add() {
 		// }, 100);
 	});
 
+	$(".submit").click(function () {
+		return false;
+	})
 
 	$('#dropdown04').on('show.bs.dropdown', function () {
 	  console.log('show');

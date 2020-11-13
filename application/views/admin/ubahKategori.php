@@ -5,7 +5,7 @@
 	<?= form_open('admin/ubah_kategori/' . $kategori['id_kategori']) ?>
 	<div class="form-group">
 		<?= form_label('Nama Kategori') ?>
-		<?= form_input(['name' => 'namakategori', 'class' => 'form-control', 'required' => 'required', 'value' => $kategori['nama_kategori']]) ?>
+		<?= form_input(['name' => 'nama_kategori', 'class' => 'form-control', 'required' => 'required', 'value' => $kategori['nama_kategori']]) ?>
 	</div>
 	<div class="form-group">
 		<a href="<?= base_url('admin/kategori') ?>" class="btn btn-success">Back</a>

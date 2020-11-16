@@ -57,6 +57,9 @@
                             <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929
                                         210</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+                            <li class="offset-6"><i class="fa fa-circle" aria-hidden="true" id="show-admin"></i></li>
+                            <li class="nav-item d-flex justify-content-center"><a href="<?= base_url('auth') ?>" class="nav-link" id="entry-admin"><i class="fa fa-user-circle" aria-hidden="true"></i>
+                                    Entry Admin Page</a></li>
                         </ul>
                     </div>
                 </div>
@@ -86,7 +89,7 @@
         <circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00" /></svg></div>
 
 
-<script src="<?= base_url('assets/js/jquery.min.js') ?>"></script>
+<script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
 <script src="<?= base_url('assets/js/jquery-migrate-3.0.1.min.js') ?>"></script>
 <script src="<?= base_url('assets/js/popper.min.js') ?>"></script>
 <script src="<?= base_url('assets/js/bootstrap.min.js') ?>"></script>
@@ -106,6 +109,13 @@
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://kit.fontawesome.com/956e9a5b88.js" crossorigin="anonymous"></script>
 <script type="text/javascript">
+    $(document).ready(function() {
+        $("#entry-admin").hide();
+        $("#show-admin").click(function() {
+            $("#entry-admin").fadeToggle(500);
+        });
+    });
+
     var page = 1;
     $(window).scroll(function() {
         if ($(window).scrollTop() + $(window).height() >= $(document).height()) {

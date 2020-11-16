@@ -1,8 +1,10 @@
 <div class="container mt-4" style="min-height: 36rem">
-	<h2>Ubah Data Produk</h2>
+	<h2 class="mb-0">Ubah Data Produk</h2>
+	<small>Last Edit By <b>Admin <?= $user['username'] ?></b></small>
 	<?= validation_errors(); ?>
 	<hr>
 	<?= form_open('admin/ubah_produk/' . $produk['id_produk']) ?>
+	<input type="text" name="editor" value="<?= set_value($user['username']) ?>" hidden>
 	<div class="form-group">
 		<?= form_label('Nama Produk') ?>
 		<?= form_input(['name' => 'nama_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['nama_produk']]) ?>

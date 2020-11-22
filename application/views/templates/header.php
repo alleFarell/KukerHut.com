@@ -49,7 +49,6 @@
                     <li class="nav-item active"><a href="<?= base_url('kukerhut/products') ?>" class="nav-link">Product</a></li>
                     <li class="nav-item"><a href="<?= base_url('kukerhut/aboutUs') ?>" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="<?= base_url('kukerhut/contact') ?>" class="nav-link">Contact</a></li>
-
                 </ul>
             </div>
         </div>

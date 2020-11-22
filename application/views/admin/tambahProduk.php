@@ -12,7 +12,7 @@
 			<form class="col-md-12" action="<?= base_url('admin/tambah_produk') ?>" method="post">
 				<div class="d-flex justify-content-center">
 					<div class="col-md-10">
-
+						<input type="text" name="editor" value="<?= $user['username'] ?>" hidden>
 						<div class="form-group">
 							<label for="nama_produk" class="mt-0">Nama Produk</label>
 							<div class="input-group">

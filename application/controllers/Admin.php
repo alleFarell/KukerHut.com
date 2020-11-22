@@ -17,10 +17,15 @@ class Admin extends CI_Controller
     {
         $content['title'] = 'Data Produk';
         $content['page'] = 'dataproduk';
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $content['data_produk'] = $this->Products_model->get_all();
-        $this->load->view('templates/headerAdmin', $content);
-        $this->load->view('admin/lihatProduk', $content);
-        $this->load->view('templates/footerAdmin');
+        if ($content['user']) {
+            $this->load->view('templates/headerAdmin', $content);
+            $this->load->view('admin/lihatProduk', $content);
+            $this->load->view('templates/footerAdmin');
+        } else {
+            redirect('auth');
+        }
     }
 
     public function kategori()
@@ -37,6 +42,8 @@ class Admin extends CI_Controller
     {
         $content['title'] = 'Tambah Produk';
         $content['kategori'] = $this->Products_model->getAllCategories();
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+
         $this->form_validation->set_rules('nama_produk', 'Nama Produk', 'required|trim|is_unique[produk.nama_produk]', [
             'is_unique' => 'Produk Sudah Tersedia'
         ]);
@@ -57,6 +64,7 @@ class Admin extends CI_Controller
     public function tambah_kategori()
     {
         $content['title'] = 'Tambah Kategori';
+
         $this->form_validation->set_rules('nama_kategori', 'Nama Kategori', 'required|trim|is_unique[produk.nama_produk]', [
             'is_unique' => 'Produk Sudah Tersedia'
         ]);
@@ -100,6 +108,10 @@ class Admin extends CI_Controller
         $content['produk'] = $this->Products_model->get_product($id);
         $content['title'] = 'Ubah Produk';
         $content['kategori'] = $this->Products_model->getAllCategories();
+        $content['kategoriProduk'] = $this->Products_model->get_kategori($content['produk']['id_kategori']);
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+        $this->form_validation->set_rules('nama_produk', 'Nama Produk', 'required|trim');
+
         if ($this->form_validation->run() == false) {
             $data['title'] = "Ubah Produk";
             $this->load->view('templates/headerAdmin', $content);

@@ -20,10 +20,10 @@ class Admin_model extends CI_Model
             'id_kategori' => htmlspecialchars($this->input->post('id_kategori', true)),
             'nama_kategori' => htmlspecialchars($this->input->post('nama_kategori', true)),
             'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
-            'harga_produk' => htmlspecialchars($this->input->post('harga_produk', true)),
+            'harga_produk' => 'Rp. ' . htmlspecialchars($this->input->post('harga_produk', true)),
             'foto_produk' => 'default.png',
             'deskripsi_produk' => htmlspecialchars($this->input->post('deskripsi_produk', true)),
-            'harga_produk' => htmlspecialchars($this->input->post('harga_produk', true))
+            'editor' => htmlspecialchars($this->input->post('editor', true))
         ];
         // foto produk belum
         $this->db->insert('produk', $data);
@@ -40,12 +40,13 @@ class Admin_model extends CI_Model
     public function editProduk($id)
     {
         $data = array(
+            'id_kategori' => htmlspecialchars($this->input->post('id_kategori', true)),
             'nama_kategori' => htmlspecialchars($this->input->post('nama_kategori', true)),
             'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
             'harga_produk' => htmlspecialchars($this->input->post('harga_produk', true)),
-            'foto_produk' => 'default.png',
+            // 'foto_produk' => 'default.png',
             'deskripsi_produk' => htmlspecialchars($this->input->post('deskripsi_produk', true)),
-            'harga_produk' => htmlspecialchars($this->input->post('harga_produk', true))
+            'editor' => htmlspecialchars($this->input->post('editor', true))
         );
         $this->db->where('id_produk', $id);
         return $this->db->update('produk', $data);
@@ -70,5 +71,14 @@ class Admin_model extends CI_Model
     {
         $this->db->where('id_kategori', $id);
         return $this->db->delete('kategori');
+    }
+
+    public function tambahAdminBaru()
+    {
+        $data = [
+            'username' => htmlspecialchars($this->input->post('username', true)),
+            'password' => password_hash($this->input->post('password'), PASSWORD_DEFAULT),
+        ];
+        $this->db->insert('admin', $data);
     }
 }

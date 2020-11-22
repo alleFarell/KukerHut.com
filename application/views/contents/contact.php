@@ -14,7 +14,7 @@
           <div class="w-100"></div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Phone: <br></span> <a href="tel://+628128291433">+62 81 2829 1433</a></p>
+              <p align="center"><span>Phone: <br></span> <a href="tel://+628128291433">+62 812 8291 433</a></p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
@@ -24,7 +24,7 @@
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Gofood: <br></span> <a href="#">Opo iki cak</a></p>
+              <p align="center"><span>Gofood: <br></span> <a href="https://gofood.link/u/J1Ax4">Kuker Hut Bakery</a></p>
             </div>
           </div>
           <div class="col-md-3 d-flex">

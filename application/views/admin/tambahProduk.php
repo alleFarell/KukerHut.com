@@ -36,20 +36,7 @@
 						</div>
 
 						<div class="form-group">
-							<label for="nama_kategori" class="col-sm-2 col-form-label">Kategori</label>
-							<div class="input-group">
-								<div class="input-group-prepend">
-									<div class="input-group-text"><i class="fas fa-briefcase"></i></div>
-								</div>
-								<select style="border-radius: 0 10px 10px 0;" class="form-control form-control-md" id="kategoriproduk" name="nama_kategori">
-									<option disabled selected value="">Pilih Kategori</option>
-									<?php foreach ($kategori as $k) : ?>
-										<option value="<?= $k['nama_kategori'] ?>"><?= $k['id_kategori'] . "-" . $k['nama_kategori'] ?></option>
-									<?php endforeach ?>
-									<!-- masih error -->
-								</select>
-							</div>
-							<label for="id_kategori" class="col-sm-2 col-form-label">Konfirmasi Kategori</label>
+							<label for="id_kategori" class="col-sm-2 col-form-label">Kategori</label>
 							<div class="input-group">
 								<div class="input-group-prepend">
 									<div class="input-group-text"><i class="fas fa-briefcase"></i></div>
@@ -57,9 +44,8 @@
 								<select style="border-radius: 0 10px 10px 0;" class="form-control form-control-md" id="kategoriproduk" name="id_kategori">
 									<option disabled selected value="">Pilih Kategori</option>
 									<?php foreach ($kategori as $k) : ?>
-										<option value="<?= $k['id_kategori'] ?>"><?= $k['id_kategori'] . "-" . $k['nama_kategori'] ?></option>
+										<option value="<?= $k['id_kategori'] ?>"><?= $k['id_kategori'] . " - " . $k['nama_kategori'] ?></option>
 									<?php endforeach ?>
-									<!-- masih error -->
 								</select>
 							</div>
 						</div>

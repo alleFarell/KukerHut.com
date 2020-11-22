@@ -18,7 +18,6 @@ class Admin_model extends CI_Model
     {
         $data = [
             'id_kategori' => htmlspecialchars($this->input->post('id_kategori', true)),
-            'nama_kategori' => htmlspecialchars($this->input->post('nama_kategori', true)),
             'nama_produk' => htmlspecialchars($this->input->post('nama_produk', true)),
             'harga_produk' => 'Rp. ' . htmlspecialchars($this->input->post('harga_produk', true)),
             'foto_produk' => 'default.png',

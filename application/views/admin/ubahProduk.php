@@ -15,24 +15,12 @@
 	</div>
 	<div class="form-group">
 		<?= form_label('Kategori') ?>
-		<select class="custom-select" id="kategoriproduk" name="nama_kategori">
-			<option value="<?= $kategoriProduk['nama_kategori'] ?>" selected><?= $kategoriProduk['id_kategori'] . "-" . $kategoriProduk['nama_kategori'] ?></option>
+		<select class="custom-select" id="kategoriproduk" name="id_kategori">
+			<option value="<?= $kategoriProduk['id_kategori'] ?>" selected><?= $kategoriProduk['id_kategori'] . " - " . $kategoriProduk['nama_kategori'] ?></option>
 			<option value="" disabled>==========================</option>
 			<?php foreach ($kategori as $k) : ?>
 				<?php if ($k['nama_kategori'] != $kategoriProduk['nama_kategori']) : ?>
-					<option value="<?= $k['nama_kategori'] ?>"><?= $k['id_kategori'] . "-" . $k['nama_kategori'] ?></option>
-				<?php endif; ?>
-			<?php endforeach; ?>
-		</select>
-	</div>
-	<div class="form-group">
-		<?= form_label('Kategori') ?>
-		<select class="custom-select" id="id_kategori" name="id_kategori">
-			<option value="<?= $kategoriProduk['id_kategori'] ?>" selected><?= $kategoriProduk['id_kategori'] . "-" . $kategoriProduk['nama_kategori'] ?></option>
-			<option value="" disabled>==========================</option>
-			<?php foreach ($kategori as $k) : ?>
-				<?php if ($k['id_kategori'] != $kategoriProduk['id_kategori']) : ?>
-					<option value="<?= $k['id_kategori'] ?>"><?= $k['id_kategori'] . "-" . $k['nama_kategori'] ?></option>
+					<option value="<?= $k['id_kategori'] ?>"><?= $k['id_kategori'] . " - " . $k['nama_kategori'] ?></option>
 				<?php endif; ?>
 			<?php endforeach; ?>
 		</select>

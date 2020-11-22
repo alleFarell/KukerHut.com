@@ -6,6 +6,11 @@
 	<?= form_open('admin/ubah_produk/' . $produk['id_produk']) ?>
 	<input type="text" name="editor" value="<?= $user['username'] ?>" hidden>
 	<div class="form-group">
+		<?= form_label('Foto Produk') ?><br>
+		<img src="<?= base_url('assets/images/fotoProduk/') . $produk['foto_produk'] ?>" height="200px">
+		<a class="btn btn-success" href="<?= base_url('upload/uploadFotoProduk/') . $produk['id_produk'] ?>" type="button">Ubah Foto</a>
+	</div>
+	<div class="form-group">
 		<?= form_label('Nama Produk') ?>
 		<?= form_input(['name' => 'nama_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['nama_produk']]) ?>
 	</div>

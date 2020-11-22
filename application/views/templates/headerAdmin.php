@@ -5,7 +5,7 @@
     <title>KukerHut</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/logo.jpeg') ?>" />
+    <link rel="shortcut icon" type="image/png" href="<?= base_url('assets/images/Logo Ori.png') ?>" />
 
     <link href="https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Lora:400,400i,700,700i&display=swap" rel="stylesheet">
@@ -42,7 +42,7 @@
     <!-- Navbar Start -->
     <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
         <div class="container">
-            <a class="navbar-brand" href="<?= base_url() ?>"><img src="<?= base_url('assets\images\Logo n Text Horizontal.png') ?>" height="80px" width="300px"></a>
+            <a class="navbar-brand" href="<?= base_url('admin') ?>"><img src="<?= base_url('assets\images\Logo n Text Horizontal.png') ?>" height="80px" width="300px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="oi oi-menu"></span> Menu
             </button>

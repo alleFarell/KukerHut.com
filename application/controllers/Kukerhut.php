@@ -27,9 +27,11 @@ class Kukerhut extends CI_Controller
     }
     public function index()
     {
+        $data['iklan'] = $this->Products_model->getIklan();
         $this->load->view('templates/header');
-        $this->load->view('contents/home');
+        $this->load->view('contents/home', $data);
         $this->load->view('templates/footer');
+
     }
     public function products()
     {

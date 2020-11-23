@@ -47,4 +47,8 @@ class Products_model extends CI_model
 		$this->db->where('id_kategori', $id);
 		return $this->db->get('kategori')->row_array();
     }
+    public function getIklan()
+    {
+        return $this->db->get('iklan')->result_array();
+    }
 }

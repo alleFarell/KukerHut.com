@@ -44,4 +44,32 @@ class Upload extends CI_Controller
             redirect('admin');
         }
     }
+     public function uploadFotoIklan($id_iklan)
+    {
+        $config['upload_path']          = './assets/images/fotoIklan/';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
+        $config['max_size']             = 5120;
+        $config['max_width']            = 2500;
+        $config['max_height']           = 1500;
+
+        $this->load->library('upload', $config);
+        $data['iklan'] = $this->db->get_where('iklan', ['id_iklan' => $id_iklan])->row_array();
+        $data['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+
+        if (!$this->upload->do_upload('foto_iklan')) {
+            $data['error'] = $this->upload->display_errors('<div class="alert alert-danger alert-dismissible fade show" role="alert"><a>', '</a><button type="button" class="close" data-dismiss="alert" aria-label="Close"><span aria-hidden="true">&times;</span></button></div>');
+            $this->load->view('templates/headerAdmin', $data);
+            $this->load->view('admin/upload_form_iklan', $data);
+            $this->load->view('templates/footerAdmin');
+        } else {
+            $image = $this->upload->data('file_name');
+            $this->db->set('foto_iklan', $image);
+            $this->db->where('id_iklan', $id_iklan);
+            $this->db->update('iklan');
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Foto Berhasil Di Upload<button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button> </div>');
+            redirect('admin/iklan');
+        }
+    }
 }

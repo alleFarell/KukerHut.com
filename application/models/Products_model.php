@@ -6,6 +6,11 @@ class Products_model extends CI_model
         return $this->db->get('produk', $limit, $start)->result_array();
     }
 
+    public function getProductHome()
+    {
+        return $this->db->get('produk', 8)->result_array();
+    }
+
     public function getAllCategories()
     {
         return $this->db->get('kategori')->result_array();

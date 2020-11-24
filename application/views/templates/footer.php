@@ -89,6 +89,7 @@
 <script src="<?= base_url('assets/js/main.js') ?>"></script>
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script src="https://kit.fontawesome.com/956e9a5b88.js" crossorigin="anonymous"></script>
+<script src="https://code.iconify.design/1/1.0.7/iconify.min.js"></script>
 <script type="text/javascript">
     $(document).ready(function() {
         $("#entry-admin").hide();

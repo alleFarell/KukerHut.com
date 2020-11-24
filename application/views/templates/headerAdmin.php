@@ -51,6 +51,7 @@
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="<?= base_url('admin') ?>" class="nav-link">Data Produk</a></li>
                     <li class="nav-item active"><a href="<?= base_url('admin/kategori') ?>" class="nav-link">Data Kategori</a></li>
+                    <li class="nav-item active"><a href="<?= base_url('admin/iklan') ?>" class="nav-link">Data Iklan</a></li>
                 </ul>
             </div>
             <form class="form-inline">

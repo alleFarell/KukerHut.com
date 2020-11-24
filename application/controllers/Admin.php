@@ -33,6 +33,7 @@ class Admin extends CI_Controller
         $content['title'] = 'Data Kategori';
         $content['page'] = 'datakategori';
         $content['data_kategori'] = $this->Products_model->getAllCategories();
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $this->load->view('templates/headerAdmin', $content);
         $this->load->view('admin/lihatKategori', $content);
         $this->load->view('templates/footerAdmin');
@@ -64,7 +65,7 @@ class Admin extends CI_Controller
     public function tambah_kategori()
     {
         $content['title'] = 'Tambah Kategori';
-
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         $this->form_validation->set_rules('nama_kategori', 'Nama Kategori', 'required|trim|is_unique[produk.nama_produk]', [
             'is_unique' => 'Produk Sudah Tersedia'
         ]);
@@ -136,6 +137,7 @@ class Admin extends CI_Controller
     {
         $content['kategori'] = $this->Products_model->get_kategori($id);
         $content['title'] = 'Ubah Kategori';
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
         if ($this->form_validation->run() == false) {
             $data['title'] = "Ubah Kategori";
             $this->load->view('templates/headerAdmin', $content);
@@ -154,5 +156,39 @@ class Admin extends CI_Controller
     {
         $cek = $this->Admin_model->delete_Kategori($id);
         redirect('admin/kategori');
+    }
+    public function tambah_iklan()
+    {
+        $content['title'] = 'Tambah Iklan';
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+
+        $this->form_validation->set_rules('nama_iklan', 'nama iklan', 'required|trim');
+
+        if ($this->form_validation->run() == false) {
+            $this->load->view('templates/headerAdmin', $content);
+            $this->load->view('admin/tambahIklan', $content);
+            $this->load->view('templates/footerAdmin');
+        } else {
+            $this->Admin_model->tambahIklanBaru();
+            $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Iklan berhasil ditambahkan! <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button></div>');
+            redirect('admin/iklan');
+        }
+    }
+    public function iklan()
+    {
+        $content['title'] = 'Data Iklan';
+        $content['page'] = 'dataiklan';
+        $content['data_iklan'] = $this->Admin_model->getAllIklan();
+        $content['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
+        $this->load->view('templates/headerAdmin', $content);
+        $this->load->view('admin/lihatIklan', $content);
+        $this->load->view('templates/footerAdmin');
+    }
+    public function hapus_iklan($id)
+    {
+        $cek = $this->Admin_model->delete_Iklan($id);
+        redirect('admin/iklan');
     }
 }

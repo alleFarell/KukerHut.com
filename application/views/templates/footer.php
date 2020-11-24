@@ -35,8 +35,8 @@
                     <h2 class="ftco-heading-2">Have a Questions?</h2>
                     <div class="block-23 mb-3">
                         <ul>
-                            <li><span class="icon icon-map-marker"></span><span class="text">Vila Nusa Indah 3 blok KE7/23, Bojong Kulur, Gunung Putri, Bogor, West Java 16969</span></li>
-                            <li><a href="#"><span class="icon icon-phone"></span><span class="text"> +62 812 8291 433</span></a></li>
+                            <li><a href="https://goo.gl/maps/2bucQQCoaAhSxDwL7"><span class="icon icon-map-marker"></span><span class="text">Vila Nusa Indah 3 blok KE7/23, Bojong Kulur, Gunung Putri, Bogor, West Java 16969</span></a></li>
+                            <li><a href="tel://+628128291433"><span class="icon icon-phone"></span><span class="text"> +62 812 8291 433</span></a></li>
                             <li><a href="#"><span class="icon icon-envelope"></span><span class="text">opo iki cak</span></a></li>
                             <li class="offset-6"><i class="fa fa-circle" aria-hidden="true" id="show-admin"></i></li>
                             <li class="nav-item d-flex justify-content-center"><a href="<?= base_url('auth') ?>" class="nav-link" id="entry-admin"><i class="fa fa-user-circle" aria-hidden="true"></i>

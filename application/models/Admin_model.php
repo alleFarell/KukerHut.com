@@ -79,4 +79,21 @@ class Admin_model extends CI_Model
         ];
         $this->db->insert('admin', $data);
     }
+       public function getAllIklan()
+    {
+        return $this->db->get('iklan')->result_array();
+    }
+     public function tambahIklanBaru()
+    {
+        $data = [
+            'nama_iklan' => htmlspecialchars($this->input->post('nama_iklan', true)),
+            'foto_iklan' => 'default.png'
+        ];
+        $this->db->insert('iklan', $data);
+    }
+    public function delete_Iklan($id)
+    {
+        $this->db->where('id_Iklan', $id);
+        return $this->db->delete('iklan');
+    }
 }

@@ -1,13 +1,14 @@
 -- phpMyAdmin SQL Dump
--- version 5.0.3
+-- version 5.0.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Nov 22, 2020 at 06:55 AM
--- Server version: 10.4.14-MariaDB
--- PHP Version: 7.4.11
+-- Waktu pembuatan: 23 Nov 2020 pada 07.14
+-- Versi server: 10.4.11-MariaDB
+-- Versi PHP: 7.2.27
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+SET AUTOCOMMIT = 0;
 START TRANSACTION;
 SET time_zone = "+00:00";
 
@@ -24,7 +25,7 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Table structure for table `admin`
+-- Struktur dari tabel `admin`
 --
 
 CREATE TABLE `admin` (
@@ -34,16 +35,37 @@ CREATE TABLE `admin` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
 
 --
--- Dumping data for table `admin`
+-- Dumping data untuk tabel `admin`
 --
 
 INSERT INTO `admin` (`id_admin`, `username`, `password`) VALUES
-(1, 'ray', '$2y$10$HdyiRfFPSg9/6ACcdBaWjOEYXOy1SFqusV3/2ZhdkZOfZCowg4TI6');
+(1, 'ray', '$2y$10$HdyiRfFPSg9/6ACcdBaWjOEYXOy1SFqusV3/2ZhdkZOfZCowg4TI6'),
+(2, 'daffa', '$2y$10$3LxFnILoVGaM.a/ciJXnSOUt92vKtTtcPBB903Jo/jAG8rPO7LDnK');
 
 -- --------------------------------------------------------
 
 --
--- Table structure for table `kategori`
+-- Struktur dari tabel `iklan`
+--
+
+CREATE TABLE `iklan` (
+  `id_iklan` int(11) NOT NULL,
+  `foto_iklan` varchar(128) DEFAULT NULL,
+  `nama_iklan` text NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+
+--
+-- Dumping data untuk tabel `iklan`
+--
+
+INSERT INTO `iklan` (`id_iklan`, `foto_iklan`, `nama_iklan`) VALUES
+(1, 'bg_31.jpg', 'HUT RI'),
+(2, 'about.jpg', 'idul pitri');
+
+-- --------------------------------------------------------
+
+--
+-- Struktur dari tabel `kategori`
 --
 
 CREATE TABLE `kategori` (
@@ -52,7 +74,7 @@ CREATE TABLE `kategori` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `kategori`
+-- Dumping data untuk tabel `kategori`
 --
 
 INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
@@ -67,7 +89,7 @@ INSERT INTO `kategori` (`id_kategori`, `nama_kategori`) VALUES
 -- --------------------------------------------------------
 
 --
--- Table structure for table `produk`
+-- Struktur dari tabel `produk`
 --
 
 CREATE TABLE `produk` (
@@ -81,74 +103,75 @@ CREATE TABLE `produk` (
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
 
 --
--- Dumping data for table `produk`
+-- Dumping data untuk tabel `produk`
 --
 
 INSERT INTO `produk` (`id_produk`, `id_kategori`, `nama_produk`, `harga_produk`, `foto_produk`, `deskripsi_produk`, `editor`) VALUES
-(1, 1, 'Pie Buah', 'Rp.160.000', 'product-1.jpg', 'Pie buah rasanya seperti buah', 'ray'),
-(2, 1, 'Cake Ulang Tahun', 'Rp.350.000', 'product-2.jpg', 'Selamat Ulang tahun kami ucapkan..', ''),
-(3, 2, 'Nastar Stick', 'Rp.140.000', 'product-3.jpg', 'Seperti mati lampuu ya sayang', ''),
-(4, 2, 'Sagu Keju Edam', 'Rp.110.000', 'product-4.jpg', 'edan pisan brow', ''),
-(5, 3, 'Puding Cake', 'Rp.70.000', 'product-5.jpg', 'my puddin', ''),
-(6, 3, 'Puding Prune', 'Rp.70.000', 'product-6.jpg', 'pruneeeee', ''),
-(7, 4, 'Banana Cream Cheese', 'Rp.80.000', 'product-7.jpg', 'Cheese Cream Banana', ''),
-(8, 4, 'Brownies Fudge', 'Rp.60.000', 'product-8.jpg', 'naon', ''),
-(9, 5, 'Es Jelly', 'Rp.10.000', 'product-9.jpg', 'es es jelly jelly', ''),
-(10, 5, 'Green Tea', 'Rp.6.500', 'product-10.jpg', 'Hijau Daun tetew', ''),
-(11, 6, 'Salted Egg', 'Rp.45.000', 'product-11.jpg', 'Telor Asin', ''),
-(12, 6, 'Onigiri', 'Rp.15.000', 'product-12.jpg', 'serizawaaa', '');
+(13, 2, 'Brown Sugar Cookies', 'Rp. 20000 - 30000', 'download.jpeg', 'Cookies dengan taburan gula merah', 'daffa');
 
 --
 -- Indexes for dumped tables
 --
 
 --
--- Indexes for table `admin`
+-- Indeks untuk tabel `admin`
 --
 ALTER TABLE `admin`
   ADD PRIMARY KEY (`id_admin`);
 
 --
--- Indexes for table `kategori`
+-- Indeks untuk tabel `iklan`
+--
+ALTER TABLE `iklan`
+  ADD PRIMARY KEY (`id_iklan`);
+
+--
+-- Indeks untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   ADD PRIMARY KEY (`id_kategori`);
 
 --
--- Indexes for table `produk`
+-- Indeks untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD PRIMARY KEY (`id_produk`),
   ADD KEY `kategori_produk_fk` (`id_kategori`);
 
 --
--- AUTO_INCREMENT for dumped tables
+-- AUTO_INCREMENT untuk tabel yang dibuang
 --
 
 --
--- AUTO_INCREMENT for table `admin`
+-- AUTO_INCREMENT untuk tabel `admin`
 --
 ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
--- AUTO_INCREMENT for table `kategori`
+-- AUTO_INCREMENT untuk tabel `iklan`
+--
+ALTER TABLE `iklan`
+  MODIFY `id_iklan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT untuk tabel `kategori`
 --
 ALTER TABLE `kategori`
   MODIFY `id_kategori` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
 
 --
--- AUTO_INCREMENT for table `produk`
+-- AUTO_INCREMENT untuk tabel `produk`
 --
 ALTER TABLE `produk`
-  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=13;
+  MODIFY `id_produk` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=14;
 
 --
--- Constraints for dumped tables
+-- Ketidakleluasaan untuk tabel pelimpahan (Dumped Tables)
 --
 
 --
--- Constraints for table `produk`
+-- Ketidakleluasaan untuk tabel `produk`
 --
 ALTER TABLE `produk`
   ADD CONSTRAINT `kategori_produk_fk` FOREIGN KEY (`id_kategori`) REFERENCES `kategori` (`id_kategori`);

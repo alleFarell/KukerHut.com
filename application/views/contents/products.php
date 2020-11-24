@@ -100,7 +100,6 @@
 					<div class="card-body">
 						<h5 class="modal-title float-left" id="exampleModalLabel" style="color: #82ae46;font-weight: 500;font-size: 25px;"><?= $d['nama_produk'] ?></h5>
 						<h5 class="text-right mb-0 p-0" style="font-weight: bold;color: #82ae46;font-size: 25px;"><span class="mr-2 price-dc"><?= $d['harga_produk']; ?></span><a target="_blank" href="https://api.whatsapp.com/send?phone=6281219643829&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a></h5>
-						<p class="badge badge-success pt-0"><?= $d['nama_kategori'] ?></p>
 						<div class="desc" style="width: 50%;">
 							<p><?= $d['deskripsi_produk'] ?></p>
 						</div>

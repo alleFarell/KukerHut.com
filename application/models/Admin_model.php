@@ -62,7 +62,10 @@ class Admin_model extends CI_Model
     public function delete_Produk($id)
     {
         $this->db->where('id_produk', $id);
-        return $this->db->delete('produk');
+        $query = $this->db->get('produk');
+        $row = $query->row();
+        unlink("./assets/images/fotoProduk/$row->foto_produk");
+        return $this->db->delete('produk', array('id_produk' => $id));
     }
 
     public function delete_Kategori($id)
@@ -79,11 +82,11 @@ class Admin_model extends CI_Model
         ];
         $this->db->insert('admin', $data);
     }
-       public function getAllIklan()
+    public function getAllIklan()
     {
         return $this->db->get('iklan')->result_array();
     }
-     public function tambahIklanBaru()
+    public function tambahIklanBaru()
     {
         $data = [
             'nama_iklan' => htmlspecialchars($this->input->post('nama_iklan', true)),
@@ -95,5 +98,13 @@ class Admin_model extends CI_Model
     {
         $this->db->where('id_Iklan', $id);
         return $this->db->delete('iklan');
+    }
+
+    public function deleteFotoLama($id)
+    {
+        $this->db->where('id_produk', $id);
+        $query = $this->db->get('produk');
+        $row = $query->row();
+        unlink("./assets/images/fotoProduk/$row->foto_produk");
     }
 }

@@ -1,4 +1,4 @@
-    <div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_contact.jpg') ?>');">
+    <div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_1.jpg') ?>');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
@@ -29,7 +29,7 @@
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Website: <br></span><a href="https://www.kukerhut.com">www.kukerhut.com</a></p>
+              <p align="center"><span>Website: <br></span><a href="https://www.kukerhut.com">www.kukerhut.id</a></p>
             </div>
           </div>
 

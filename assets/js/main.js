@@ -54,6 +54,7 @@ function add() {
 		}
 	};
 
+
 	$(window).stellar({
     responsive: true,
     parallaxBackgrounds: true,

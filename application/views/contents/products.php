@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_1.jpg') ?>');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_produk.jpg') ?>');">
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
@@ -12,6 +12,7 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10 mb-5 text-center">
+
 				<ul class="product-category">
 
 					<?php if ($this->uri->segment('3') == "") : ?>
@@ -26,6 +27,7 @@
 						<?php else : ?>
 							<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
 						<?php endif ?>
+			
 					<?php endforeach ?>
 				</ul>
 			</div>
@@ -64,7 +66,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 text-center">
-							<h2>No Data Available</h2>
+
+							<h2>Oops! No Products Here</h2>
+
 						</div>
 					</div>
 				</div>
@@ -109,6 +113,7 @@
 								<p class="mr-2 price-dc text-success" style="font-weight: bold;font-size: 20px;"><?= $d['harga_produk']; ?></p>
 								<p><?= $d['deskripsi_produk'] ?></p>
 								<a target="_blank" href="https://api.whatsapp.com/send?phone=628128291433&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a>
+
 							</div>
 						</div>
 

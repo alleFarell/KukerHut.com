@@ -1,8 +1,7 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_1.jpg') ?>');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_aboutus.jpg') ?>');">
     <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
             <div class="col-md-9 ftco-animate text-center">
-                <p class="breadcrumbs"><span class="mr-2"><a href="index.html">Home</a></span> <span>About us</span></p>
                 <h1 class="mb-0 bread">About us</h1>
             </div>
         </div>
@@ -34,6 +33,155 @@
     </div>
 </section>
 
+<section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
+    <div class="container py-4">
+        <div class="row d-flex justify-content-center py-5">
+            <div class="col-md-6">
+                <h2 style="font-size: 22px;" class="mb-0">Subcribe to our Newsletter</h2>
+                <span>Dapatkan pemberitahuan ter-update mengenai promo di KukerHut!</span>
+            </div>
+            <div class="col-md-6 d-flex align-items-center">
+                <form action="#" class="subscribe-form">
+                    <div class="form-group d-flex">
+                        <input type="text" class="form-control" placeholder="Enter email address">
+                        <input type="submit" value="Subscribe" class="submit px-3">
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section ftco-counter img" id="section-counter" style="background-image: url(<?= base_url('assets/images/bg_3.jpg') ?>);">
+    <div class="container">
+        <div class="row justify-content-center py-5">
+            <div class="col-md-10">
+                <div class="row">
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="10000">0</strong>
+                                <span>Happy Customers</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="100">0</strong>
+                                <span>Branches</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="1000">0</strong>
+                                <span>Partner Kami</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-3 d-flex justify-content-center counter-wrap ftco-animate">
+                        <div class="block-18 text-center">
+                            <div class="text">
+                                <strong class="number" data-number="100">0</strong>
+                                <span>Penghargaan</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="ftco-section testimony-section">
+    <div class="container">
+        <div class="row justify-content-center mb-5 pb-3">
+            <div class="col-md-7 heading-section ftco-animate text-center">
+                <span class="subheading">Testimonial</span>
+                <h2 class="mb-4">Our satisfied customer says</h2>
+                <p>Kue yang ditawarkan oleh KukerHut sangatlah beragam! Recommended lho untuk pesan ini. Selain harganya terjangkau, juga kualitas nya terjamin sampai di rumah Anda :)</p>
+            </div>
+        </div>
+        <div class="row ftco-animate">
+            <div class="col-md-12">
+                <div class="carousel-testimony owl-carousel">
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/images/person_1.jpg') ?>)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">Hi, aku Rachmat Dwi Putra, mengurus tentang marketing manager. Jadi,marketing management adalah serangkaian proses menganalisa, merencanakan, menjalankan, mengawasi dan mengevaluasi program pemasaran yang meliputi product, price, placement dan promotion.</p>
+                                <p class="name">Rachmat Dwi Putra</p>
+                                <span class="position">Marketing Manager</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/images/person_1.jpg') ?>)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">Nama saya Mohammad Daffa Haris, sebagai Desainer pada Interface web ini. Semoga kalian menikmati tampilan yang telah kami sediakan :)</p>
+                                <p class="name">Mohammad Daffa Haris</p>
+                                <span class="position">Interface Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5" style="background-image: url(images/person_3.jpg)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">Sebagai UI designer merupakan pengalaman terbaru bagi saya dalam mengembangkan website Kukerhut ini. Happy shopping!</p>
+                                <p class="name">Rayhan Rahmanda</p>
+                                <span class="position">UI Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/images/person_1.jpg') ?>)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">Nama saya Afif, sebagai pengelola pada web ini. Have enjoy dan stay safe.</p>
+                                <p class="name">Muhammad Afif Raihan</p>
+                                <span class="position">Web Developer</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="item">
+                        <div class="testimony-wrap p-4 pb-5">
+                            <div class="user-img mb-5" style="background-image: url(<?= base_url('assets/images/person_1.jpg') ?>)">
+                                <span class="quote d-flex align-items-center justify-content-center">
+                                    <i class="icon-quote-left"></i>
+                                </span>
+                            </div>
+                            <div class="text text-center">
+                                <p class="mb-5 pl-4 line">Saya sebagai pimpinan pada project ini, sangat bersyukur karena telah terealisasi web ini. Selain itu, dengan menjadi Data Analyst, kami akan terus memberikan yang terbaik kepada pelanggan tercinta :)</p>
+                                <p class="name">Muhamad Farell Ambiar</p>
+                                <span class="position">Data Analyst</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
 
 <section class="ftco-section bg-light">
     <div class="container">

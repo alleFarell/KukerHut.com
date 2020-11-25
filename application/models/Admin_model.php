@@ -66,6 +66,9 @@ class Admin_model extends CI_Model
         $row = $query->row();
         unlink("./assets/images/fotoProduk/$row->foto_produk");
         return $this->db->delete('produk', array('id_produk' => $id));
+
+        
+
     }
 
     public function delete_Kategori($id)
@@ -82,6 +85,7 @@ class Admin_model extends CI_Model
         ];
         $this->db->insert('admin', $data);
     }
+  
     public function getAllIklan()
     {
         return $this->db->get('iklan')->result_array();
@@ -107,4 +111,5 @@ class Admin_model extends CI_Model
         $row = $query->row();
         unlink("./assets/images/fotoProduk/$row->foto_produk");
     }
+
 }

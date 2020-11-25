@@ -29,7 +29,7 @@
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Website: <br></span><a href="https://www.kukerhut.com">www.kukerhut.com</a></p>
+              <p align="center"><span>Website: <br></span><a href="https://www.kukerhut.com">www.kukerhut.id</a></p>
             </div>
           </div>
 

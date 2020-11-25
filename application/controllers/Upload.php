@@ -7,6 +7,8 @@ class Upload extends CI_Controller
     {
         parent::__construct();
         $this->load->helper(array('form', 'url'));
+        $this->load->model('Admin_model');
+
     }
 
     public function index()
@@ -22,6 +24,10 @@ class Upload extends CI_Controller
         $config['max_width']            = 1500;
         $config['max_height']           = 1500;
 
+        $config['file_name']            = "FotoProduk_" . $id_produk;
+        $config['overwrite'] = TRUE;
+
+
         $this->load->library('upload', $config);
         $data['produk'] = $this->db->get_where('produk', ['id_produk' => $id_produk])->row_array();
         $data['user'] = $this->db->get_where('admin', ['username' => $this->session->userdata('username')])->row_array();
@@ -32,11 +38,14 @@ class Upload extends CI_Controller
             $this->load->view('admin/upload_form', $data);
             $this->load->view('templates/footerAdmin');
         } else {
+
+            // $this->Admin_model->deleteFotoLama($id_produk);
             $image = $this->upload->data('file_name');
             $editor = htmlspecialchars($this->input->post('editor', true));
-            $this->db->set('foto_produk', $image);
             $this->db->set('editor', $editor);
             $this->db->where('id_produk', $id_produk);
+            $this->db->set('foto_produk', $image);
+         
             $this->db->update('produk');
             $this->session->set_flashdata('pesan', '<div class="alert alert-success alert-dismissible fade show" role="alert">Foto Berhasil Di Upload<button type="button" class="close" data-dismiss="alert" aria-label="Close">
             <span aria-hidden="true">&times;</span>
@@ -44,13 +53,17 @@ class Upload extends CI_Controller
             redirect('admin');
         }
     }
-     public function uploadFotoIklan($id_iklan)
+
+    public function uploadFotoIklan($id_iklan)
     {
         $config['upload_path']          = './assets/images/fotoIklan/';
         $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['max_size']             = 5120;
         $config['max_width']            = 2500;
         $config['max_height']           = 1500;
+        $config['file_name']            = "FotoProduk_" . $id_iklan;
+        $config['overwrite'] = TRUE;
+
 
         $this->load->library('upload', $config);
         $data['iklan'] = $this->db->get_where('iklan', ['id_iklan' => $id_iklan])->row_array();

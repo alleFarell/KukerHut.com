@@ -13,13 +13,6 @@
 		<div class="row justify-content-center">
 			<div class="col-md-10 mb-5 text-center">
 				<ul class="product-category">
-<<<<<<< Updated upstream
-					<li><a href="<?= base_url(); ?>Kukerhut/products/" class="active">All</a></li>
-					<?php foreach ($category as $ct) { ?>
-						<!-- <li><a href="<?= site_url('products/category/'), $ct->id_kategori ?>"><?= $ct->nama_kategori ?></a></li> -->
-						<li><a href="<?= base_url(); ?>Kukerhut/category/<?= $ct->id_kategori; ?>"><?= $ct->nama_kategori ?></a></li>
-					<?php } ?>
-=======
 
 					<?php if ($this->uri->segment('3') == "") : ?>
 						<li><a href="<?= base_url('kukerhut/products'); ?>" class="active">All</a></li>
@@ -34,27 +27,11 @@
 							<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
 						<?php endif ?>
 					<?php endforeach ?>
->>>>>>> Stashed changes
 				</ul>
 			</div>
 		</div>
 
 		<div class="row">
-<<<<<<< Updated upstream
-			<?php foreach ($data as $p) : ?>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" style="background: none;border: none;float: left;">
-						<div class="product">
-							<a class="img-prod"><img class="img-fluid" src="<?= base_url('assets/images/') . $p['foto_produk'] ?>" alt="Colorlib Template">
-								<span class="status">Serba 25rb</span>
-								<div class="overlay"></div>
-							</a>
-							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#"><?= $p['nama_produk']; ?></a></h3>
-								<div class="d-flex">
-									<div class="pricing">
-										<p class="price"><span class="mr-2 price-dc"><?= $p['harga_produk']; ?></span><span class="price-sale">Rp25.000</span></p>
-=======
 			<?php if ($data != NULL) : ?>
 				<?php foreach ($data as $p) : ?>
 					<div class="col-md-6 col-lg-3 ftco-animate">
@@ -70,27 +47,37 @@
 										<div class="pricing">
 											<p class="price"><span class="mr-2 price-dc"></span><span class="price-sale"><?= $p['harga_produk']; ?></span></p>
 										</div>
->>>>>>> Stashed changes
 									</div>
-								</div>
-								<div class="bottom-area d-flex px-3">
-									<div class="m-auto d-flex">
-										<a button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" class="buy-now d-flex justify-content-center align-items-center mx-1">
-											<span><i class="ion-ios-cart"></i></span>
-										</a>
+									<div class="bottom-area d-flex px-3">
+										<div class="m-auto d-flex">
+											<a button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" class="buy-now d-flex justify-content-center align-items-center mx-1">
+												<span class="iconify" data-icon="logos:whatsapp" data-inline="false"></span>
+											</a>
+										</div>
 									</div>
 								</div>
 							</div>
+						</button>
+					</div>
+				<?php endforeach; ?>
+			<?php else : ?>
+				<div class="container">
+					<div class="row">
+						<div class="col-12 text-center">
+							<h2>No Data Available</h2>
 						</div>
-					</button>
+					</div>
 				</div>
-			<?php endforeach; ?>
+			<?php endif ?>
 		</div>
-
 		<div class="row mt-5">
 			<div class="col text-center">
 				<!--Tampilkan pagination-->
-				<!-- <?php echo $pagination; ?> -->
+				<?php if ($this->uri->segment('4') == '') {
+					echo $pagination;
+				} else {
+					echo $this->pagination->create_links();
+				} ?>
 			</div>
 		</div>
 	</div>
@@ -100,26 +87,13 @@
 <?php foreach ($data as $d) : ?>
 	<div class="modal fade" id="modalDetails<?= $d['id_produk'] ?>" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true">
 		<div class="modal-dialog">
-
-			<div class="modal-content d-none d-md-block" style="width:40vw">
+			<div class="modal-content" style="width: auto;">
 				<div class="modal-header">
 					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 						<span aria-hidden="true">&times;</span>
 					</button>
 				</div>
 				<div class="modal-body">
-<<<<<<< Updated upstream
-					<div class="img-responsive d-flex justify-content-center" style="height: 10vw;width: auto;">
-						<img class="card-img-top" src="<?= base_url('assets/images/' . $d['foto_produk']) ?>" style="height: 10vw;width: auto;">
-					</div>
-					<hr style="width: 50%;background-color:#82ae46;">
-					<div class="card-body">
-						<h5 class="modal-title float-left" id="exampleModalLabel" style="color: #82ae46;font-weight: 500;font-size: 25px;"><?= $d['nama_produk'] ?></h5>
-						<h5 class="text-right mb-0 p-0" style="font-weight: bold;color: #82ae46;font-size: 25px;">Rp. 25.000 <br><a target="_blank" href="https://api.whatsapp.com/send?phone=628111512711&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>%20ini	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a></h5>
-						<p class="badge badge-success pt-0"><?= $d['nama_kategori'] ?></p>
-						<div class="desc" style="width: 50%;">
-							<p><?= $d['deskripsi_produk'] ?></p>
-=======
 					<div class="img-responsive d-flex justify-content-center mb-5" style="height: 250px;width: auto;">
 						<img class="card-img-top mb-4" src="<?= base_url('assets/images/fotoProduk/' . $d['foto_produk']) ?>" style="height: 300px;width: auto;">
 					</div>
@@ -136,8 +110,8 @@
 								<p><?= $d['deskripsi_produk'] ?></p>
 								<a target="_blank" href="https://api.whatsapp.com/send?phone=628128291433&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a>
 							</div>
->>>>>>> Stashed changes
 						</div>
+
 					</div>
 
 				</div>

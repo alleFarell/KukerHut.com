@@ -172,6 +172,7 @@
                         </div>
                     </div>
                 </div>
+<<<<<<< Updated upstream
             </div>
             <div class="col-md-6 col-lg-3 ftco-animate">
                 <div class="product">
@@ -486,12 +487,16 @@
                     </div>
                 </div>
             </div>
+=======
+            <?php endforeach; ?>
+>>>>>>> Stashed changes
         </div>
     </div>
 </section>
 
 <hr>
 
+<<<<<<< Updated upstream
 <section class="ftco-section ftco-partner">
     <div class="container">
         <div class="row">
@@ -532,3 +537,49 @@
         </div>
     </div>
 </section>
+=======
+
+<?php foreach ($produk as $d) : ?>
+    <div class="modal fade" id="modalDetails<?= $d['id_produk'] ?>" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: auto;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="img-responsive d-flex justify-content-center" style="height: 250px;width: auto;">
+                        <img class="card-img-top" src="<?= base_url('assets/images/fotoProduk/' . $d['foto_produk']) ?>" style="height: 300px;width: auto;">
+                    </div>
+                    <hr style="width: 50%;background-color:#942E90 !important;">
+                    <div class="card-body">
+                        <div class="d-flex bd-highlight">
+                            <div class="p-2 bd-highlight w-50">
+                                <h5 class="modal-title" id="exampleModalLabel" style="color: #942E90 !important;font-weight: 500;font-size: 25px;"><?= $d['nama_produk'] ?>
+                                </h5>
+                                <p class="badge badge-success">
+                                    <?= $this->db->get_where('kategori', ['id_kategori' => $d['id_kategori']])->row('nama_kategori'); ?>
+                                </p>
+                                <!-- <div class="desc" style="width: 50%;"> -->
+                                <p><?= $d['deskripsi_produk'] ?></p>
+                                <!-- </div> -->
+                            </div>
+                            <div class="ml-auto bd-highlight">
+                                <h5 class="mb-0 p-0 mt-0" style="font-weight: bold;color: #942E90 !important;font-size: 25px;">
+                                    <span class="mr-2 price-dc text-success"><?= $d['harga_produk']; ?></span>
+                                    <br>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=628128291433&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a>
+                                </h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+<?php endforeach ?>
+>>>>>>> Stashed changes

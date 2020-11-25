@@ -56,7 +56,7 @@ class Upload extends CI_Controller
         $config['max_size']             = 5120;
         $config['max_width']            = 2500;
         $config['max_height']           = 1500;
-        $config['file_name']            = "FotoProduk_" . $id_iklan;
+        $config['file_name']            = "FotoIklan_" . $id_iklan;
         $config['overwrite'] = TRUE;
 
         $this->load->library('upload', $config);

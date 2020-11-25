@@ -97,8 +97,11 @@ class Admin_model extends CI_Model
     }
     public function delete_Iklan($id)
     {
-        $this->db->where('id_Iklan', $id);
-        return $this->db->delete('iklan');
+        $this->db->where('id_iklan', $id);
+        $query = $this->db->get('iklan');
+        $row = $query->row();
+        unlink("./assets/images/fotoIklan/$row->foto_iklan");
+        return $this->db->delete('iklan', array('id_iklan' => $id));
     }
 
     public function deleteFotoLama($id)

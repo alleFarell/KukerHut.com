@@ -1,8 +1,8 @@
-    <div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_1.jpg') ?>');">
+    <div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_contact.jpg') ?>');">
       <div class="container">
         <div class="row no-gutters slider-text align-items-center justify-content-center">
           <div class="col-md-9 ftco-animate text-center">
-            <h1 class="mb-0 bread">Get in touch with us</h1>
+            <h1 class="mb-0 bread offset-3" style="background-color: #942E90;width:50%;">Get in touch with us</h1>
           </div>
         </div>
       </div>
@@ -14,22 +14,22 @@
           <div class="w-100"></div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Phone: <br></span> <a href="tel://+628128291433">+62 812 8291 433</a></p>
+              <p align="center"><span><img src="<?= base_url('assets/images/phonee.png') ?>" height="30px" width="auto" class="mb-2"> <br></span> <a href=" tel://+628128291433">+62 812 8291 433</a> </p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Instagram: <br></span> <a href="https://www.instagram.com/kuker.hut/">@kuker.hut</a></p>
+              <p align="center"><span><img src="<?= base_url('assets/images/ig.png') ?>" height="40px" width="auto"><br></span> <a href="https://www.instagram.com/kuker.hut/">@kuker.hut</a></p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Gofood: <br></span> <a href="https://gofood.link/u/J1Ax4">Kuker Hut Bakery</a></p>
+              <p align="center"><span><img src="<?= base_url('assets/images/gofood.png') ?>" height="40px" width="auto"><br></span> <a href="https://gofood.link/u/J1Ax4">Kuker Hut Bakery</a></p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span>Website: <br></span><a href="https://www.kukerhut.com">www.kukerhut.id</a></p>
+              <p align="center"><span><img src="<?= base_url('assets/images/fb.png') ?>" height="40px" width="auto"><br></span><a href="https://www.facebook.com/kuker.hut">Kuker Hut</a></p>
             </div>
           </div>
 

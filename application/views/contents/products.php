@@ -1,8 +1,8 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_1.jpg') ?>');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_produk.jpg') ?>');">
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
-				<h1 class="mb-0 bread">Products</h1>
+				<h1 class="mb-0 bread offset-3" style="background-color: #942E90;width:50%;">Products</h1>
 			</div>
 		</div>
 	</div>
@@ -12,24 +12,22 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10 mb-5 text-center">
-				<<<<<<< HEAD=======>>>>>>> 837c8bd5e5fc67a3319a7a1ecd447e72b4d07a71
-					<ul class="product-category">
+				<ul class="product-category">
 
-						<?php if ($this->uri->segment('3') == "") : ?>
-							<li><a href="<?= base_url('kukerhut/products'); ?>" class="active">All</a></li>
+					<?php if ($this->uri->segment('3') == "") : ?>
+						<li><a href="<?= base_url('kukerhut/products'); ?>" class="active">All</a></li>
+					<?php else : ?>
+						<li><a href="<?= base_url('kukerhut/products'); ?>">All</a></li>
+					<?php endif ?>
+
+					<?php foreach ($category as $ct) : ?>
+						<?php if ($this->uri->segment('3') == $ct->id_kategori) : ?>
+							<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>" class="active"> <?= $ct->nama_kategori ?> </a></li>
 						<?php else : ?>
-							<li><a href="<?= base_url('kukerhut/products'); ?>">All</a></li>
+							<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
 						<?php endif ?>
-
-						<?php foreach ($category as $ct) : ?>
-							<?php if ($this->uri->segment('3') == $ct->id_kategori) : ?>
-								<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>" class="active"> <?= $ct->nama_kategori ?> </a></li>
-							<?php else : ?>
-								<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
-							<?php endif ?>
-							<<<<<<< HEAD=======>>>>>>> 837c8bd5e5fc67a3319a7a1ecd447e72b4d07a71
-							<?php endforeach ?>
-					</ul>
+					<?php endforeach ?>
+				</ul>
 			</div>
 		</div>
 

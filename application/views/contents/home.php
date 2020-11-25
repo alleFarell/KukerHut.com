@@ -28,7 +28,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Free Shipping</h3>
-                        <span>On order over $100</span>
+                        <span>On order around VNI3</span>
                     </div>
                 </div>
             </div>
@@ -61,7 +61,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Support</h3>
-                        <span>24/7 Support</span>
+                        <span>Well Services</span>
                     </div>
                 </div>
             </div>

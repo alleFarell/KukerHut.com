@@ -1,4 +1,4 @@
-<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_1.jpg') ?>');">
+<div class="hero-wrap hero-bread" style="background-image: url('<?= base_url('assets/images/bg_produk.jpg') ?>');">
 	<div class="container">
 		<div class="row no-gutters slider-text align-items-center justify-content-center">
 			<div class="col-md-9 ftco-animate text-center">
@@ -12,8 +12,12 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10 mb-5 text-center">
-				<ul class="product-category">
-					<li><a href="<?= base_url('kukerhut/products'); ?>" class="active">All</a></li>
+			<?php 
+			$directoryURI = $_SERVER['REQUEST_URI'];
+			$path = parse_url($directoryURI, PHP_URL_PATH);
+			?>
+				<ul class="product-category" id="listKategori">
+					<li><a href="<?= base_url('kukerhut/products/'); ?>" class="<?php if ($path=="/KukerHut/kukerhut/products/") {echo "active"; } else  {echo "noactive";}?>">All</a></li>
 					<?php foreach ($category as $ct) : ?>
 						<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
 					<?php endforeach ?>
@@ -54,7 +58,7 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 text-center">
-							<h2>No Data Available</h2>
+							<h2>Oops! No Products Here</h2>
 						</div>
 					</div>
 				</div>

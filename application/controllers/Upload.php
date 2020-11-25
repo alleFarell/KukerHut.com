@@ -35,6 +35,7 @@ class Upload extends CI_Controller
             $this->load->view('admin/upload_form', $data);
             $this->load->view('templates/footerAdmin');
         } else {
+
             // $this->Admin_model->deleteFotoLama($id_produk);
             $image = $this->upload->data('file_name');
             $editor = htmlspecialchars($this->input->post('editor', true));

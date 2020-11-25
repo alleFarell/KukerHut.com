@@ -157,9 +157,7 @@
         </div>
     </div>
 </section>
-
 <hr>
-
 
 <?php foreach ($produk as $d) : ?>
     <div class="modal fade" id="modalDetails<?= $d['id_produk'] ?>" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true">
@@ -195,12 +193,9 @@
                                 </h5>
                             </div>
                         </div>
-
                     </div>
-
                 </div>
             </div>
-
         </div>
     </div>
 <?php endforeach ?>

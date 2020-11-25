@@ -12,22 +12,24 @@
 	<div class="container">
 		<div class="row justify-content-center">
 			<div class="col-md-10 mb-5 text-center">
-				<ul class="product-category">
+				<<<<<<< HEAD=======>>>>>>> 837c8bd5e5fc67a3319a7a1ecd447e72b4d07a71
+					<ul class="product-category">
 
-					<?php if ($this->uri->segment('3') == "") : ?>
-						<li><a href="<?= base_url('kukerhut/products'); ?>" class="active">All</a></li>
-					<?php else : ?>
-						<li><a href="<?= base_url('kukerhut/products'); ?>">All</a></li>
-					<?php endif ?>
-
-					<?php foreach ($category as $ct) : ?>
-						<?php if ($this->uri->segment('3') == $ct->id_kategori) : ?>
-							<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>" class="active"> <?= $ct->nama_kategori ?> </a></li>
+						<?php if ($this->uri->segment('3') == "") : ?>
+							<li><a href="<?= base_url('kukerhut/products'); ?>" class="active">All</a></li>
 						<?php else : ?>
-							<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
+							<li><a href="<?= base_url('kukerhut/products'); ?>">All</a></li>
 						<?php endif ?>
-					<?php endforeach ?>
-				</ul>
+
+						<?php foreach ($category as $ct) : ?>
+							<?php if ($this->uri->segment('3') == $ct->id_kategori) : ?>
+								<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>" class="active"> <?= $ct->nama_kategori ?> </a></li>
+							<?php else : ?>
+								<li><a href="<?= base_url('kukerhut/category/'); ?><?= $ct->id_kategori; ?>"> <?= $ct->nama_kategori ?> </a></li>
+							<?php endif ?>
+							<<<<<<< HEAD=======>>>>>>> 837c8bd5e5fc67a3319a7a1ecd447e72b4d07a71
+							<?php endforeach ?>
+					</ul>
 			</div>
 		</div>
 
@@ -64,7 +66,9 @@
 				<div class="container">
 					<div class="row">
 						<div class="col-12 text-center">
-							<h2>No Data Available</h2>
+
+							<h2>Oops! No Products Here</h2>
+
 						</div>
 					</div>
 				</div>

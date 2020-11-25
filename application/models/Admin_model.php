@@ -82,6 +82,7 @@ class Admin_model extends CI_Model
         ];
         $this->db->insert('admin', $data);
     }
+
     public function getAllIklan()
     {
         return $this->db->get('iklan')->result_array();

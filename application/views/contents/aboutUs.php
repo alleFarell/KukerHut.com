@@ -27,7 +27,7 @@
                     <p>KukerHut adalah usaha rumahan khusus untuk kuliner. Produk khas kami adalah Kue Kering.</p>
                     <p>Kami juga menyediakan Cake untuk Event (Wedding, Birthday, Anniversary, dll)</p>
                     <p>Tak lupa juga Dessert untuk cemilan dan teman Anda dikala santai bersama keluarga atau berkumpul dengan teman dan sahabat saat arisan atau pengajian.</p>
-                    <p><a href="#" class="btn btn-primary">Belanja di KukerHut sekarang!</a></p>
+                    <p><a href="<?= base_url('kukerhut/products') ?>" class="btn btn-primary">Belanja di KukerHut sekarang!</a></p>
                 </div>
             </div>
         </div>

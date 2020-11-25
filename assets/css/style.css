@@ -2911,14 +2911,14 @@ fieldset:disabled a.btn {
 }
 
 .btn-primary {
-	color: #fff;
-	background-color: #007bff;
+	color: #fff !important;
+	background-color: #080008 !important;
 	border-color: #007bff;
 }
 
 .btn-primary:hover {
-	color: #fff;
-	background-color: #0069d9;
+	color: #fff !important;
+	background-color: #0e010d !important;
 	border-color: #0062cc;
 }
 
@@ -4758,7 +4758,7 @@ input[type="button"].btn-block {
 
 .nav-tabs .nav-link:hover,
 .nav-tabs .nav-link:focus {
-	border-color: #e9ecef #e9ecef #dee2e6;
+	border-color: #e9ecef #e9ecef #1a60a7;
 }
 
 .nav-tabs .nav-link.disabled {
@@ -4876,6 +4876,12 @@ input[type="button"].btn-block {
 .navbar-nav .nav-link {
 	padding-right: 0;
 	padding-left: 0;
+}
+
+.navbar-nav .nav-link:hover {
+	padding-right: 0;
+	padding-left: 0;
+	font-weight: bold !important;
 }
 
 .navbar-nav .dropdown-menu {
@@ -12205,7 +12211,7 @@ h5,
 
 .btn.btn-primary:hover {
 	border: 1px solid #942E90 !important;
-	background: transparent;
+	background: #fff !important;
 	color: #942E90 !important;
 }
 
@@ -12373,15 +12379,30 @@ h5,
 	font-size: 16px;
 }
 
+.product-category li:hover {
+	display: inline-block;
+	font-weight: 400;
+	font-size: 16px;
+	background: #942E90 !important;
+	border-radius: 5px;
+}
+
+
 .product-category li a {
 	color: #942E90 !important;
 	padding: 5px 20px;
 	border-radius: 5px;
 }
 
+.product-category li a:hover {
+	color: white !important;
+	/* padding: 5px 20px; */
+	/* font-weight: bold !important; */
+}
+
 .product-category li a.active {
 	background: #942E90 !important;
-	color: #fff;
+	color: #fff !important;
 }
 
 .ftco-product .owl-carousel .owl-stage-outer {
@@ -12491,12 +12512,13 @@ h5,
 }
 
 .product .text h3 a {
-	color: #000000;
+	color: #942E90 !important;
+	font-weight: bold;
 }
 
 .product .text p.price {
 	margin-bottom: 0;
-	color: #942E90 !important;
+	color: #28a745 !important;
 	font-weight: 400;
 }
 
@@ -12506,7 +12528,7 @@ h5,
 }
 
 .product .text p.price span.price-sale {
-	color: #942E90 !important;
+	color: #28a745 !important;
 }
 
 .product .text .pricing {
@@ -12528,7 +12550,7 @@ h5,
 .product .text .bottom-area a {
 	color: #fff;
 	width: 100%;
-	background: #942E90 !important;
+	background: #28a745 !important;
 	width: 40px;
 	height: 40px;
 	margin: 0 auto;
@@ -13356,7 +13378,7 @@ textarea.form-control {
 }
 
 .ftco-category .category-wrap .text h2 a {
-	color: #fff;
+	color: #fff !important;
 }
 
 .ftco-category .category-wrap-2 {

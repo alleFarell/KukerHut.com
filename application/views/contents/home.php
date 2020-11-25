@@ -2,7 +2,7 @@
 <section id="home-section" class="hero">
     <div class="home-slider owl-carousel">
         <?php foreach ($iklan as $i) : ?>
-            <div class="slider-item" style="background-image: url('<?= base_url('assets/images/fotoIklan/').$i['foto_iklan'] ?>');">
+            <div class="slider-item" style="background-image: url('<?= base_url('assets/images/fotoIklan/') . $i['foto_iklan'] ?>');">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row slider-text justify-content-center align-items-bottom" data-scrollax-parent="true">
@@ -128,32 +128,32 @@
     <div class="container">
         <div class="row">
             <?php foreach ($produk as $p) : ?>
-				<div class="col-md-6 col-lg-3 ftco-animate">
-					<button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" style="background: none;border: none;float: left;">
-						<div class="product">
-							<a class="img-prod" style="height: 240px;width: auto;"><img class="img-fluid" src="<?= base_url('assets/images/fotoProduk/') . $p['foto_produk'] ?>" alt="Colorlib Template">
-								<!-- <span class="status">Serba 25rb</span> -->
-								<div class="overlay"></div>
-							</a>
-							<div class="text py-3 pb-4 px-3 text-center">
-								<h3><a href="#"><?= $p['nama_produk']; ?></a></h3>
-								<div class="d-flex">
-									<div class="pricing">
-										<p class="price"><span class="mr-2 price-dc"></span><span class="price-sale"><?= $p['harga_produk']; ?></span></p>
-									</div>
-								</div>
-								<div class="bottom-area d-flex px-3">
-									<div class="m-auto d-flex">
-										<a button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" class="buy-now d-flex justify-content-center align-items-center mx-1">
-											<span><i class="ion-ios-cart"></i></span>
-										</a>
-									</div>
-								</div>
-							</div>
-						</div>
-					</button>
-				</div>
-			<?php endforeach; ?>
+                <div class="col-md-6 col-lg-3 ftco-animate">
+                    <button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" style="background: none;border: none;float: left;">
+                        <div class="product">
+                            <a class="img-prod" style="height: 240px;width: auto;"><img class="img-fluid" src="<?= base_url('assets/images/fotoProduk/') . $p['foto_produk'] ?>" alt="Colorlib Template">
+                                <!-- <span class="status">Serba 25rb</span> -->
+                                <div class="overlay"></div>
+                            </a>
+                            <div class="text py-3 pb-4 px-3 text-center">
+                                <h3><a href="#"><?= $p['nama_produk']; ?></a></h3>
+                                <div class="d-flex">
+                                    <div class="pricing">
+                                        <p class="price"><span class="mr-2 price-dc"></span><span class="price-sale"><?= $p['harga_produk']; ?></span></p>
+                                    </div>
+                                </div>
+                                <div class="bottom-area d-flex px-3">
+                                    <div class="m-auto d-flex">
+                                        <a button type="button" data-toggle="modal" data-target="#modalDetails<?php echo $p['id_produk'] ?>" class="buy-now d-flex justify-content-center align-items-center mx-1">
+                                            <span class="iconify" data-icon="logos:whatsapp" data-inline="false"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </button>
+                </div>
+            <?php endforeach; ?>
         </div>
     </div>
 </section>
@@ -289,28 +289,6 @@
 
 <hr>
 
-<section class="ftco-section ftco-partner">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="<?= base_url('assets/images/partner-1.png') ?>" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="<?= base_url('assets/images/partner-2.png') ?>" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="<?= base_url('assets/images/partner-3.png') ?>" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="<?= base_url('assets/images/partner-4.png') ?>" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
-            <div class="col-sm ftco-animate">
-                <a href="#" class="partner"><img src="<?= base_url('assets/images/partner-5.png') ?>" class="img-fluid" alt="Colorlib Template"></a>
-            </div>
-        </div>
-    </div>
-</section>
-
 <section class="ftco-section ftco-no-pt ftco-no-pb py-5 bg-light">
     <div class="container py-4">
         <div class="row d-flex justify-content-center py-5">
@@ -329,3 +307,47 @@
         </div>
     </div>
 </section>
+
+<?php foreach ($produk as $d) : ?>
+    <div class="modal fade" id="modalDetails<?= $d['id_produk'] ?>" tabindex="-1" aria-labelledby="modalDetailsLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content" style="width: auto;">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="img-responsive d-flex justify-content-center" style="height: 250px;width: auto;">
+                        <img class="card-img-top" src="<?= base_url('assets/images/fotoProduk/' . $d['foto_produk']) ?>" style="height: 300px;width: auto;">
+                    </div>
+                    <hr style="width: 50%;background-color:#942E90 !important;">
+                    <div class="card-body">
+                        <div class="d-flex bd-highlight">
+                            <div class="p-2 bd-highlight w-50">
+                                <h5 class="modal-title" id="exampleModalLabel" style="color: #942E90 !important;font-weight: 500;font-size: 25px;"><?= $d['nama_produk'] ?>
+                                </h5>
+                                <p class="badge badge-success">
+                                    <?= $this->db->get_where('kategori', ['id_kategori' => $d['id_kategori']])->row('nama_kategori'); ?>
+                                </p>
+                                <!-- <div class="desc" style="width: 50%;"> -->
+                                <p><?= $d['deskripsi_produk'] ?></p>
+                                <!-- </div> -->
+                            </div>
+                            <div class="ml-auto bd-highlight">
+                                <h5 class="mb-0 p-0 mt-0" style="font-weight: bold;color: #942E90 !important;font-size: 25px;">
+                                    <span class="mr-2 price-dc text-success"><?= $d['harga_produk']; ?></span>
+                                    <br>
+                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=6281219643829&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a>
+                                </h5>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+<?php endforeach ?>

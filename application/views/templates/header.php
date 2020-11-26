@@ -36,17 +36,18 @@
 <body class="goto-here">
 
     <!-- Navbar Start -->
-    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
+    <nav class="navbar navbar-expand-lg navbar-light ftco_navbar bg-light ftco-navbar-light" id="ftco-navbar">
         <div class="container">
             <a class="navbar-brand" href="<?= base_url() ?>" style="font-family: RosewoodStd-Regular;"><img src="<?= base_url('assets/images/Logo n Text Horizontal.png') ?>" height="70px"></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="oi oi-menu"></span> Menu
+                <!-- <span class="navbar-toggler-icon-dark"></span> -->
+                <span class="oi oi-menu" style="color: #942E90;"></span>
             </button>
 
             <div class="collapse navbar-collapse" id="ftco-nav">
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item active"><a href="<?= base_url() ?>" class="nav-link">Home</a></li>
-                    <li class="nav-item active"><a href="<?= base_url('kukerhut/products') ?>" class="nav-link">Product</a></li>
+                    <li class="nav-item "><a href="<?= base_url('kukerhut/products') ?>" class="nav-link">Product</a></li>
                     <li class="nav-item"><a href="<?= base_url('kukerhut/aboutUs') ?>" class="nav-link">About Us</a></li>
                     <li class="nav-item"><a href="<?= base_url('kukerhut/contact') ?>" class="nav-link">Contact</a></li>
                 </ul>

@@ -1,14 +1,11 @@
 <!--- Dafa Punya --->
 <section id="home-section" class="hero">
-    <div class="home-slider owl-carousel">
+    <div class="home-slider owl-carousel" style="height: 450px;">
         <?php foreach ($iklan as $i) : ?>
-            <div class="slider-item" style="background-image: url('<?= base_url('assets/images/fotoIklan/') . $i['foto_iklan'] ?>');">
+            <div class="slider-item" style="background-image: url('<?= base_url('assets/images/fotoIklan/') . $i['foto_iklan'] ?>'); height: 450px;">
                 <div class="overlay"></div>
                 <div class="container">
                     <div class="row slider-text justify-content-center align-items-bottom" data-scrollax-parent="true">
-                        <div class="col-sm-12 ftco-animate text-center">
-                            <h1 class="mb-2"><?= $i['nama_iklan']; ?></h1>
-                        </div>
                     </div>
                 </div>
             </div>
@@ -18,7 +15,7 @@
 <!--- Dafa Punya --->
 
 <!-- Categories Start -->
-<section class="ftco-section">
+<section class="ftco-section" style="margin-top: -60px;">
     <div class="container">
         <div class="row no-gutters ftco-services">
             <div class="col-md-3 text-center d-flex align-self-stretch ftco-animate">
@@ -28,7 +25,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Free Shipping</h3>
-                        <span>On order around VNI3</span>
+                        <span>On order around Villa Nusa Indah 3</span>
                     </div>
                 </div>
             </div>
@@ -79,37 +76,44 @@
                         <div class="category-wrap-2 ftco-animate img align-self-stretch d-flex" style="background-image: url(<?= base_url('assets/images/kategori.jpg') ?>);">
                             <div class="text text-center">
                                 <h2>Cake and Cookies</h2>
-                                <p>Choose the best Joy</p>
                                 <p><a href="<?= base_url('kukerhut/products') ?>" class="btn btn-primary">Shop now</a></p>
                             </div>
                         </div>
                     </div>
                     <div class="col-md-6">
-                        <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-1.jpg') ?>);">
-                            <div class="text px-3 py-1">
-                                <h2 class="mb-0"><a href="<?= base_url(); ?>Kukerhut/category/1">Cake</a></h2>
+                        <a href="<?= base_url(); ?>Kukerhut/category/1">
+                            <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-1.jpg') ?>);">
+                                <div class="text px-3 py-1">
+                                    <h2 class="mb-0" style="color: white; ">Cake</h2>
+                                </div>
                             </div>
-                        </div>
-                        <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-2.jpg') ?> );">
-                            <div class="text px-3 py-1">
-                                <h2 class="mb-0"><a href="<?= base_url(); ?>Kukerhut/category/2">Cookies</a></h2>
+                        </a>
+                        <a href="<?= base_url(); ?>Kukerhut/category/2">
+                            <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-2.jpg') ?> );">
+                                <div class="text px-3 py-1">
+                                    <h2 class="mb-0" style="color: white; ">Cookies</h2>
+                                </div>
                             </div>
-                        </div>
+                        </a>
                     </div>
                 </div>
             </div>
 
             <div class="col-md-4">
-                <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-3.jpg') ?>);">
-                    <div class="text px-3 py-1">
-                        <h2 class="mb-0"><a href="<?= base_url(); ?>Kukerhut/category/3">Dessert</a></h2>
+                <a href="<?= base_url(); ?>Kukerhut/category/3">
+                    <div class="category-wrap ftco-animate img mb-4 d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-3.jpg') ?>);">
+                        <div class="text px-3 py-1">
+                            <h2 class="mb-0" style="color: white; ">Dessert</h2>
+                        </div>
                     </div>
-                </div>
+                </a>
+                <a href="<?= base_url(); ?>Kukerhut/category/4">
                 <div class="category-wrap ftco-animate img d-flex align-items-end" style="background-image: url(<?= base_url('assets/images/kategori-4.jpg') ?>);">
                     <div class="text px-3 py-1">
-                        <h2 class="mb-0"><a href="<?= base_url(); ?>Kukerhut/category/4">Daily Cake</a></h2>
+                        <h2 class="mb-0" style="color: white; ">Daily Cake</h2>
                     </div>
                 </div>
+                </a>
             </div>
         </div>
     </div>
@@ -121,7 +125,7 @@
             <div class="col-md-12 heading-section text-center ftco-animate">
                 <span class="subheading">Featured Products</span>
                 <h2 class="mb-4">Our Products</h2>
-                <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia</p>
+                <p>Enjoy The Taste of Home Made Bakery with Premium Quality!</p>
             </div>
         </div>
     </div>
@@ -169,33 +173,29 @@
                     </button>
                 </div>
                 <div class="modal-body">
-                    <div class="img-responsive d-flex justify-content-center" style="height: 250px;width: auto;">
-                        <img class="card-img-top" src="<?= base_url('assets/images/fotoProduk/' . $d['foto_produk']) ?>" style="height: 300px;width: auto;">
+                    <div class="img-responsive d-flex justify-content-center mb-5" style="height: 250px;width: auto;">
+                        <img class="card-img-top mb-4" src="<?= base_url('assets/images/fotoProduk/' . $d['foto_produk']) ?>" style="height: 300px;width: auto;">
                     </div>
-                    <hr style="width: 50%;background-color:#942E90 !important;">
-                    <div class="card-body">
+                    <!-- <hr style="width: 50%;background-color:#942E90 !important;"> -->
+                    <div class="card-body border-top">
                         <div class="d-flex bd-highlight">
-                            <div class="p-2 bd-highlight w-50">
+                            <div class="p-2 flex-fill bd-highlight w-100">
                                 <h5 class="modal-title" id="exampleModalLabel" style="color: #942E90 !important;font-weight: 500;font-size: 25px;"><?= $d['nama_produk'] ?>
                                 </h5>
-                                <p class="badge badge-success">
+                                <p class="badge badge-success mb-0">
                                     <?= $this->db->get_where('kategori', ['id_kategori' => $d['id_kategori']])->row('nama_kategori'); ?>
                                 </p>
-                                <!-- <div class="desc" style="width: 50%;"> -->
+                                <p class="mr-2 price-dc text-success" style="font-weight: bold;font-size: 20px;"><?= $d['harga_produk']; ?></p>
                                 <p><?= $d['deskripsi_produk'] ?></p>
-                                <!-- </div> -->
-                            </div>
-                            <div class="ml-auto bd-highlight">
-                                <h5 class="mb-0 p-0 mt-0" style="font-weight: bold;color: #942E90 !important;font-size: 25px;">
-                                    <span class="mr-2 price-dc text-success"><?= $d['harga_produk']; ?></span>
-                                    <br>
-                                    <a target="_blank" href="https://api.whatsapp.com/send?phone=628128291433&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?	" type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a>
-                                </h5>
+                                <a target="_blank" href="https://api.whatsapp.com/send?phone=628128291433&text=Halo%20Saya%20Mau%20Beli%20<?= $d['nama_produk'] ?>,%20Apakah%20Ready?   " type="button" class="btn btn-outline-info mb-0"> <img src="<?= base_url('assets/images/wa.png') ?>" style="width: 20px;height: auto;"> Contact Us</a>
                             </div>
                         </div>
+
                     </div>
+
                 </div>
             </div>
+
         </div>
     </div>
 <?php endforeach ?>

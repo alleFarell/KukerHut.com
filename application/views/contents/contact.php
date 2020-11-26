@@ -14,22 +14,22 @@
           <div class="w-100"></div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span><img src="<?= base_url('assets/images/phonee.png') ?>" height="30px" width="auto" class="mb-2"> <br></span> <a href=" tel://+628128291433">+62 812 8291 433</a> </p>
+              <p align="center"><span> <a href="https://wa.me/628128291433" target="_blank"><img src="<?= base_url('assets/images/phonee.png') ?>" height="30px" width="auto" class="mb-2"></a> <br></span> <a href="https://wa.me/628128291433" target="_blank">+62 812 8291 433</a> </p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span><img src="<?= base_url('assets/images/ig.png') ?>" height="40px" width="auto"><br></span> <a href="https://www.instagram.com/kuker.hut/">@kuker.hut</a></p>
+              <p align="center"><span><a href="https://www.instagram.com/kuker.hut/" target="_blank"><img src="<?= base_url('assets/images/ig.png') ?>" height="40px" width="auto"></a><br></span> <a href="https://www.instagram.com/kuker.hut/" target="_blank">@kuker.hut</a></p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span><img src="<?= base_url('assets/images/gofood.png') ?>" height="40px" width="auto"><br></span> <a href="https://gofood.link/u/J1Ax4">Kuker Hut Bakery</a></p>
+              <p align="center"><span> <a href="https://gofood.link/u/J1Ax4" target="_blank"><img src="<?= base_url('assets/images/gofood.png') ?>" height="40px" width="auto"></a><br></span> <a href="https://gofood.link/u/J1Ax4" target="_blank">Kuker Hut Bakery</a></p>
             </div>
           </div>
           <div class="col-md-3 d-flex">
             <div class="info bg-white p-4">
-              <p align="center"><span><img src="<?= base_url('assets/images/fb.png') ?>" height="40px" width="auto"><br></span><a href="https://www.facebook.com/kuker.hut">Kuker Hut</a></p>
+              <p align="center"><span><a href="https://www.facebook.com/kuker.hut" target="_blank"><img src="<?= base_url('assets/images/fb.png') ?>" height="40px" width="auto"></a><br></span><a href="https://www.facebook.com/kuker.hut" target="_blank">Kuker Hut</a></p>
             </div>
           </div>
 

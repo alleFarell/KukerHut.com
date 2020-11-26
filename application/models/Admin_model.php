@@ -64,8 +64,12 @@ class Admin_model extends CI_Model
         $this->db->where('id_produk', $id);
         $query = $this->db->get('produk');
         $row = $query->row();
-        unlink("./assets/images/fotoProduk/$row->foto_produk");
-        return $this->db->delete('produk', array('id_produk' => $id));
+        if($row->foto_produk == "default.png"){
+            return $this->db->delete('produk', array('id_produk' => $id));
+        }else{
+            unlink("./assets/images/fotoProduk/$row->foto_produk");
+            return $this->db->delete('produk', array('id_produk' => $id));
+        }
     }
 
     public function delete_Kategori($id)

@@ -47,7 +47,7 @@
                     </div>
                     <div class="media-body">
                         <h3 class="heading">Free Shipping</h3>
-                        <span>On order around VNI3</span>
+                        <span>On order around Villa Nusa Indah 3</span>
                     </div>
                 </div>
             </div>

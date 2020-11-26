@@ -33,7 +33,7 @@
 	</div>
 	<div class="form-group">
 		<?= form_label('Deskripsi Produk') ?>
-		<?= form_input(['name' => 'deskripsi_produk', 'class' => 'form-control', 'required' => 'required', 'value' => $produk['deskripsi_produk']]) ?>
+		<?= form_textarea(['name' => 'deskripsi_produk', 'class' => 'form-control', 'value' => $produk['deskripsi_produk']]) ?>
 	</div>
 	<div class="form-group">
 		<a href="<?= base_url('admin') ?>" class="btn btn-success">Back</a>
